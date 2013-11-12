@@ -133,24 +133,23 @@ if(!isset($_SESSION['usuario'])){
 						<!-- Navigation -->
                        
 						<ul id="nav" class="sf-menu">
-							<li class="current-menu-item"><a href="../index.php">Inicio<span class="subheader">Bienvenido</span></a>
+							<li ><a href="../index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
 							</li>
 							<li><a href="../alumnos.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
-									<li><a href="../porvotar.php"><span>Por Votar</span></a></li>
-									<li><a href="../votaron.php"><span>Votaron</span></a></li>
+									
+									<li><a href="votaronCasaCulturaI.php"><span>Votaron(Casa Cultura I)</span></a></li>
 									
 								</ul>
 							</li>
-							<li><a href="../totaldevotos.php">Votos<span class="subheader">Total</span></a>
-							</li>
+							
                             
                             
                             	<!-- sedes -->
-                            <li><a href="../alumnos.php">Sede<span class="subheader">Alterna</span></a>
+                            <li class="current-menu-item"><a href="Casa_cultura_I.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
 									<li><a href="Casa_cultura_I.php"><span>Casa Cultura I</span></a></li>
@@ -269,7 +268,7 @@ if(!isset($_SESSION['usuario'])){
 <th><font face="verdana"><b>MESA</b></font></th>
 </tr>
                 <?php  
-               
+
 		include ("../conexion.php");
   $link = @mysql_connect("localhost", "root","Joel10")
       or die ("Error al conectar a la base de datos.");

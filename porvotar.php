@@ -143,10 +143,68 @@ if(!isset($_SESSION['usuario'])){
 									<li><a href="votaron.php"><span>Votaron</span></a></li>
 									
 								</ul>
+							</li>                          
+                            
+                            	<!-- sedes -->
+                            <li><a href="alumnos.php">Sede<span class="subheader">Alterna</span></a>
+								<ul>
+									
+									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
+									<li><a href="votaron.php"><span>Casa Cultura II</span></a></li>
+                                    <li><a href="votaron.php"><span>Sillitas</span></a></li>
+                                    <li><a href="votaron.php"><span>Santa Paula</span></a></li>
+									
+								</ul>
 							</li>
-							<li><a href="totaldevotos.php">Votos<span class="subheader">Total</span></a>
+                            
+                            
+                           	<!-- carreras --> 
+                            
+							<li><a href="alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+								<ul>
+									
+									<li><a href="porvotar.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="votaron.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="votaron.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="votaron.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="votaron.php"><span>Ing. Ciencias Computacionales</span></a></li>
+                                    <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="votaron.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="votaron.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="votaron.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="votaron.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="votaron.php"><span>Lic. Abogado</span></a></li>
+                                          <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+									
+								</ul>
 							</li>
-						
+
+ 	<!-- Grado y grupo --> 
+
+<li><a href="alumnos.php">Grado y Grupo<span class="subheader">Aulas</span></a>
+								<ul>
+									
+									<li><a href="porvotar.php"><span>1ero A</span></a></li>
+									<li><a href="votaron.php"><span>1ero B</span></a></li>
+                                    <li><a href="votaron.php"><span>2do A</span></a></li>
+                                    <li><a href="votaron.php"><span>2do B</span></a></li>
+                                     <li><a href="votaron.php"><span>3ero A</span></a></li>
+                                      <li><a href="votaron.php"><span>3ero B</span></a></li>
+                                       <li><a href="votaron.php"><span>4to A</span></a></li>
+                                        <li><a href="votaron.php"><span>4to B</span></a></li>
+									
+								</ul>
+							</li>
+                            
+                            
+                           <li><a href="alumnos.php">Turno<span class="subheader">Matutino Vespertino</span></a>
+								<ul>
+									
+									<li><a href="porvotar.php"><span>Matutino</span></a></li>
+									<li><a href="votaron.php"><span>Vespertino</span></a></li>
+									
+								</ul>
+							</li> 
 
 						</ul>
 						<div id="bottom">

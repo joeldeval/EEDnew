@@ -10,7 +10,9 @@ if(!isset($_SESSION['usuario'])){
 	<link rel="shortcut icon" href="favicon.png" />
 		<meta charset="utf-8">
 		<title>EED | Inicio</title>
-
+ <script src="jquery-ui/js/jquery-1.9.1.js"></script>
+    <script src="jquery-ui/js/jquery-ui.js"></script>
+    <script src="ajax-jquery.js"></script>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
@@ -137,7 +139,7 @@ if(!isset($_SESSION['usuario'])){
 							<li class="current-menu-item"><a href="index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
-							<li><a href="alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a id="Alumnos" href="alumnos.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
 									<li><a href="porvotar.php"><span>Por Votar</span></a></li>
@@ -145,15 +147,14 @@ if(!isset($_SESSION['usuario'])){
 									
 								</ul>
 							</li>
-							<li><a href="totaldevotos.php">Votos<span class="subheader">Total</span></a>
-							</li>
+						
                             
                             
                             	<!-- sedes -->
-                            <li><a href="alumnos.php">Sede<span class="subheader">Alterna</span></a>
+                            <li><a href="sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
-									<li><a href="Sede_casaculturaI/Casa_cultura_I.php"><span>Casa Cultura I</span></a></li>
+									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
 									<li><a href="votaron.php"><span>Casa Cultura II</span></a></li>
                                     <li><a href="votaron.php"><span>Sillitas</span></a></li>
                                     <li><a href="votaron.php"><span>Santa Paula</span></a></li>
@@ -164,7 +165,7 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+							<li><a href="carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
 									<li><a href="porvotar.php"><span>Lic. Salud Publica</span></a></li>
@@ -185,30 +186,6 @@ if(!isset($_SESSION['usuario'])){
 
  	<!-- Grado y grupo --> 
 
-<li><a href="alumnos.php">Grado y Grupo<span class="subheader">Aulas</span></a>
-								<ul>
-									
-									<li><a href="porvotar.php"><span>1ero A</span></a></li>
-									<li><a href="votaron.php"><span>1ero B</span></a></li>
-                                    <li><a href="votaron.php"><span>2do A</span></a></li>
-                                    <li><a href="votaron.php"><span>2do B</span></a></li>
-                                     <li><a href="votaron.php"><span>3ero A</span></a></li>
-                                      <li><a href="votaron.php"><span>3ero B</span></a></li>
-                                       <li><a href="votaron.php"><span>4to A</span></a></li>
-                                        <li><a href="votaron.php"><span>4to B</span></a></li>
-									
-								</ul>
-							</li>
-                            
-                            
-                           <li><a href="alumnos.php">Turno<span class="subheader">Matutino Vespertino</span></a>
-								<ul>
-									
-									<li><a href="porvotar.php"><span>Matutino</span></a></li>
-									<li><a href="votaron.php"><span>Vespertino</span></a></li>
-									
-								</ul>
-							</li> 
 
 						</ul>
 
@@ -252,19 +229,7 @@ if(!isset($_SESSION['usuario'])){
 			<!-- ENDS Slider -->
 			
 			<!-- MAIN -->
-			<div id="main">
-				<!-- wrapper-main -->
-				<div class="wrapper">
-					
-					<!-- headline -->
-					<div class="clear"></div>
-					
-					<!-- ENDS headline -->
-					
-					<!-- content -->
-					</div>
-				<!-- ENDS wrapper-main -->
-			</div>
+			
 			<!-- ENDS MAIN -->
 			
 			<!-- Twitter -->
@@ -272,41 +237,14 @@ if(!isset($_SESSION['usuario'])){
 				<div class="wrapper">
 					<a href="#" id="prev-tweet"></a>
 					<a href="#" id="next-tweet"></a>
-					<img id="bird" src="img/bird.png" alt="Tweets" />
+					<img id="bird" src="img/logoudg.png" alt="Tweets" />
 					<div id="tweets">
 						<ul class="tweet_list"></ul>
 					</div>
 				</div>
 			</div>
 			<!-- ENDS Twitter -->
-<div id="footer">
-				<!-- wrapper-footer -->
-				<div class="wrapper">
-					<!-- footer-cols -->
-					<ul id="footer-cols">
-						<li class="col">
-							<h6>Páginas</h6>
-							<ul>
-								<li class="page_item"><a href="index.html">¿Quiénes somos?</a></li>
-											
-							    <li class="page_item"><a href="mision.html">Propósito</a></li>
-								<li class="page_item"><a href="blog.html">Blog</a></li>
-								<li class="page_item"><a href="gallery.html">Galería</a></li>
-								<li class="page_item"><a href="contact.html">Contacto</a></li>
 
-							</ul>
-				
-						</li>
-						
-					
-						
-						
-					</ul>
-					<!-- ENDS footer-cols -->
-				</div>
-				<!-- ENDS wrapper-footer -->
-			</div>
-			
 			
 		
 			<!-- Bottom -->

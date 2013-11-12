@@ -3,19 +3,16 @@ session_start();
 if(!isset($_SESSION['usuario'])){
 	header("Location: principal.php");
 }
-
-
-require_once('contacto.php');
-require_once('listarContactos.php');
 ?>
-
-
 <!DOCTYPE  html>
 <html>
 	<head>
 	<link rel="shortcut icon" href="favicon.png" />
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/> 
-		<title>EED | Alumnos Por Votar</title>
+		<meta charset="utf-8">
+		<title>EED | Inicio</title>
+ <script src="jquery-ui/js/jquery-1.9.1.js"></script>
+    <script src="jquery-ui/js/jquery-ui.js"></script>
+    <script src="ajax-jquery.js"></script>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
@@ -96,19 +93,19 @@ require_once('listarContactos.php');
 
 	</head>
 	
-	<body>
+	<body class="home">
 
 			<!-- HEADER -->
-		<div id="header">
+			<div id="header">
 				<!-- wrapper-header -->
 				<div class="wrapper">
-					<a href="index.html"><img id="logo" src="images/dummylogo.png" alt="Nova" /></a>
+					<a href="http://www.cutonala.udg.mx"><img id="logo" src="images/dummylogo.png" alt="Nova" /></a>
 					<img id="logo1" src="images/logo1.png">
 					<br/>
 		
 					<?php
   echo "<form id='head' method='post' action='cerrarsesion.php'>
-     <label id='lblusu'> Bienvenido ".$_SESSION['usuario']."</label><br/>
+     <label id='lblusu'>Bienvenido  ".$_SESSION['usuario']."</label><br/>
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
@@ -139,48 +136,109 @@ require_once('listarContactos.php');
 					<div class="wrapper">
 						<!-- Navigation -->
 						<ul id="nav" class="sf-menu">
-							<li><a href="index.php">Inicio<span class="subheader">Bienvenido</span></a>
+							<li class="current-menu-item"><a href="index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
-							<li class="current-menu-item"><a href="alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a id="Alumnos" href="alumnos.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
 									<li><a href="porvotar.php"><span>Por Votar</span></a></li>
 									<li><a href="votaron.php"><span>Votaron</span></a></li>
 									
 								</ul>
-							</li>                          
+							</li>
+						
+                            
                             
                             	<!-- sedes -->
-                           
-						
+                            <li><a href="alumnos.php">Sede<span class="subheader">Alterna</span></a>
+								<ul>
+									
+									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
+									<li><a href="votaron.php"><span>Casa Cultura II</span></a></li>
+                                    <li><a href="votaron.php"><span>Sillitas</span></a></li>
+                                    <li><a href="votaron.php"><span>Santa Paula</span></a></li>
+									
+								</ul>
+							</li>
+                            
+                            
+                           	<!-- carreras --> 
+                            
+							<li><a href="alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+								<ul>
+									
+									<li><a href="porvotar.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="votaron.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="votaron.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="votaron.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="votaron.php"><span>Ing. Ciencias Computacionales</span></a></li>
+                                    <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="votaron.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="votaron.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="votaron.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="votaron.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="votaron.php"><span>Lic. Abogado</span></a></li>
+                                          <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+									
+								</ul>
+							</li>
+
+ 	<!-- Grado y grupo --> 
+
+<li><a href="alumnos.php">Grado y Grupo<span class="subheader">Aulas</span></a>
+								<ul>
+									
+									<li><a href="porvotar.php"><span>1ero A</span></a></li>
+									<li><a href="votaron.php"><span>1ero B</span></a></li>
+                                    <li><a href="votaron.php"><span>2do A</span></a></li>
+                                    <li><a href="votaron.php"><span>2do B</span></a></li>
+                                     <li><a href="votaron.php"><span>3ero A</span></a></li>
+                                      <li><a href="votaron.php"><span>3ero B</span></a></li>
+                                       <li><a href="votaron.php"><span>4to A</span></a></li>
+                                        <li><a href="votaron.php"><span>4to B</span></a></li>
+									
+								</ul>
+							</li>
+                            
+                            
+                           <li><a href="alumnos.php">Turno<span class="subheader">Matutino Vespertino</span></a>
+								<ul>
+									
+									<li><a href="porvotar.php"><span>Matutino</span></a></li>
+									<li><a href="votaron.php"><span>Vespertino</span></a></li>
+									
+								</ul>
+							</li> 
+
 						</ul>
-						<div id="bottom">
+
+							<div id="bottom">
 				<!-- wrapper-bottom -->
 				
 					
 					<!-- Social -->
 					<ul class="social ">
-						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>
-						<li><a href="https://www.youtube.com/watch?v=LEso6YsTM_Y" class="poshytip youtube" title="View our videos"></a></li>
+						<li><a href="https://www.facebook.com/centrouniversitariodetonala" class="poshytip  facebook" title="ME GUSTA"></a></li>
+						<li><a href="https://www.youtube.com/watch?v=LEso6YsTM_Y" class="poshytip youtube" title="Ve Nuestros Videos"></a></li>
 					</ul>
 					<!-- ENDS Social -->
 				
 				<!-- ENDS wrapper-bottom -->
 			</div>
+				
 						<!-- Navigation -->
 					</div>
 					<!-- wrapper-menu -->
 				</div>
 				<!-- ENDS menu-holder -->
+
 			</div>
 			<!-- ENDS Menu -->
 			
 			
 			
 
-			
-			<!-- MAIN -->
 			<div id="main">
 				<!-- wrapper-main -->
 				<div class="wrapper">
@@ -191,7 +249,7 @@ require_once('listarContactos.php');
 						
 					<!-- title -->
 					<div id="page-title">
-						<span class="title">ALUMNOS</span>
+						<span class="title">LICENCIATURAS</span>
 					</div>
 					<!-- ENDS title -->
 
@@ -199,24 +257,24 @@ require_once('listarContactos.php');
 					<div id="page-content">
 											
 						<!-- 2 cols -->
-						<div class="one-half">
-							<h6 class="line-divider">Todos Los Alumnos </h6>
+						<div class="one-column">
+							<h6 class="line-divider">Carreras </h6>
 							<p>   
-
-
-		 <?php
-
-            $modelo = new Contacto();
-            $contactos = $modelo->encontrarTodos();
-
-
-            $listar = new ListarContactos();
-            $listar->contactos = $contactos;
-            $listar->generaTabla();
-
-          
-        ?>
-
+							
+								<li><a href="porvotar.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="votaron.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="votaron.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="votaron.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="votaron.php"><span>Ing. Ciencias Computacionales</span></a></li>
+                                    <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="votaron.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="votaron.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="votaron.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="votaron.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="votaron.php"><span>Lic. Abogado</span></a></li>
+                                          <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+								
+                            
 							</p>
 						</div>
 						
@@ -233,6 +291,11 @@ require_once('listarContactos.php');
 				<!-- ENDS wrapper-main -->
 			</div>
 			<!-- ENDS MAIN -->
+			<!-- ENDS Slider -->
+			
+			<!-- MAIN -->
+			
+			<!-- ENDS MAIN -->
 			
 			<!-- Twitter -->
 			<div id="twitter">
@@ -246,12 +309,38 @@ require_once('listarContactos.php');
 				</div>
 			</div>
 			<!-- ENDS Twitter -->
+<div id="footer">
+				<!-- wrapper-footer -->
+				<div class="wrapper">
+					<!-- footer-cols -->
+					<ul id="footer-cols">
+						<li class="col">
+							<h6>Páginas</h6>
+							<ul>
+								<li class="page_item"><a href="index.html">¿Quiénes somos?</a></li>
+											
+							    <li class="page_item"><a href="mision.html">Propósito</a></li>
+								<li class="page_item"><a href="blog.html">Blog</a></li>
+								<li class="page_item"><a href="gallery.html">Galería</a></li>
+								<li class="page_item"><a href="contact.html">Contacto</a></li>
 
-			<!-- ENDS FOOTER -->
-		
+							</ul>
+				
+						</li>
+						
+					
+						
+						
+					</ul>
+					<!-- ENDS footer-cols -->
+				</div>
+				<!-- ENDS wrapper-footer -->
+			</div>
+			
+			
 		
 			<!-- Bottom -->
-				<div id="bottom">
+			<div id="bottom">
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
 					<div id="bottom-text">Universidad de Guadalajara © Derechos reservados ©1997-2012.</div>
@@ -269,3 +358,4 @@ require_once('listarContactos.php');
 	
 	</body>
 </html>
+

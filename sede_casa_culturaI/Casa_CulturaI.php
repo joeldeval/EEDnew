@@ -137,7 +137,7 @@ if(!isset($_SESSION['usuario'])){
 							
 								</li>
 							</li>
-							<li><a href="../alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a href="Casa_CulturaI.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
 									<li><a href="porvotarCasaCulturaI.php"><span>Por Votar(Casa Cultura I)</span></a></li>
@@ -145,15 +145,13 @@ if(!isset($_SESSION['usuario'])){
 									
 								</ul>
 							</li>
-							<li><a href="../totaldevotos.php">Votos<span class="subheader">Total</span></a>
-							</li>
+						
                             
                             
                             	<!-- sedes -->
-                            <li class="current-menu-item"><a href="../alumnos.php">Sede<span class="subheader">Alterna</span></a>
+                            <li class="current-menu-item"><a href="../sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
-									<li><a href="Casa_cultura_I.php"><span>Casa Cultura I</span></a></li>
 									<li><a href="../votaron.php"><span>Casa Cultura II</span></a></li>
                                     <li><a href="../votaron.php"><span>Sillitas</span></a></li>
                                     <li><a href="../votaron.php"><span>Santa Paula</span></a></li>
@@ -185,30 +183,7 @@ if(!isset($_SESSION['usuario'])){
 
  	<!-- Grado y grupo --> 
 
-<li><a href="../alumnos.php">Grado y Grupo<span class="subheader">Aulas</span></a>
-								<ul>
-									
-									<li><a href="../porvotar.php"><span>1ero A</span></a></li>
-									<li><a href="../votaron.php"><span>1ero B</span></a></li>
-                                    <li><a href="../votaron.php"><span>2do A</span></a></li>
-                                    <li><a href="../votaron.php"><span>2do B</span></a></li>
-                                     <li><a href="../votaron.php"><span>3ero A</span></a></li>
-                                      <li><a href="../votaron.php"><span>3ero B</span></a></li>
-                                       <li><a href="../votaron.php"><span>4to A</span></a></li>
-                                        <li><a href="../votaron.php"><span>4to B</span></a></li>
-									
-								</ul>
-							</li>
-                            
-                            
-                           <li><a href="../alumnos.php">Turno<span class="subheader">Matutino Vespertino</span></a>
-								<ul>
-									
-									<li><a href="../porvotar.php"><span>Matutino</span></a></li>
-									<li><a href="../votaron.php"><span>Vespertino</span></a></li>
-									
-								</ul>
-							</li> 
+
                             
                             
 						</ul>
