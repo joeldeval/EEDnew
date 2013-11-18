@@ -1,7 +1,7 @@
 
 <?
 /* A continuación, realizamos la conexión con nuestra base de datos en MySQL */
-$link = mysql_connect("localhost","root","");
+$link = mysql_connect("localhost","root","Joel10");
 mysql_select_db("cutonala", $link);
 
 $usu=$_POST['txtusuario'];
@@ -13,8 +13,8 @@ $nmyusuario = mysql_num_rows($myusuario);
 
 //Si existe el usuario, validamos también la contraseña ingresada y el estado del usuario…
 if($nmyusuario == 1){
-$sql = "SELECT * from Usuario where Nombre='$usu' and Password='$contra'";
-$myclave = mysql_query($sql,$link) or die (mysql_error);
+$sql = "SELECT * from Usuario where Nombre='$usu' and Password=md5('$contra')";
+$myclave = mysql_query($sql,$link);
 $nmyclave = mysql_num_rows($myclave);
 
 //Si el usuario y clave ingresado son correctos (y el usuario está activo en la BD), creamos la sesión del mismo.

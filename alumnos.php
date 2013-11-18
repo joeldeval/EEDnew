@@ -15,6 +15,7 @@ require_once('listarContactos.php');
 	<head>
 	<link rel="shortcut icon" href="favicon.png" />
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/> 
+				<meta charset="utf-8">
 		<title>EED | Alumnos Por Votar</title>
 		
 		<!-- CSS -->
@@ -112,7 +113,7 @@ require_once('listarContactos.php');
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="#">
+						<form  method="get" id="searchform" action="Buscador.php">
 							<div>
 								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
 								<input type="submit" id="searchsubmit" value=" " />
@@ -142,7 +143,7 @@ require_once('listarContactos.php');
 							<li><a href="index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
-							<li class="current-menu-item"><a href="alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li class="current-menu-item"><a href="alumnos.php">Alumnos<span class="subheader">Todas las Sedes</span></a>
 								<ul>
 									
 									<li><a href="porvotar.php"><span>Por Votar</span></a></li>
@@ -205,11 +206,7 @@ require_once('listarContactos.php');
 
 
 		 <?php
-            
-  $link = @mysql_connect("localhost", "root","")
-      or die ("Error al conectar a la base de datos.");
-  @mysql_select_db("cutonala", $link)
-      or die ("Error al conectar a la base de datos.");
+
             $modelo = new Contacto();
             $contactos = $modelo->encontrarTodos();
 
@@ -243,7 +240,7 @@ require_once('listarContactos.php');
 				<div class="wrapper">
 					<a href="#" id="prev-tweet"></a>
 					<a href="#" id="next-tweet"></a>
-					<img id="bird" src="img/bird.png" alt="Tweets" />
+					<img id="bird" src="img/logoudg.png" alt="Tweets" />
 					<div id="tweets">
 						<ul class="tweet_list"></ul>
 					</div>
@@ -251,14 +248,13 @@ require_once('listarContactos.php');
 			</div>
 			<!-- ENDS Twitter -->
 
-			<!-- ENDS FOOTER -->
-		
+			
 		
 			<!-- Bottom -->
-				<div id="bottom">
+			<div id="bottom">
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
-					<div id="bottom-text">Universidad de Guadalajara © Derechos reservados ©1997-2012.</div>
+					<div id="bottom-text">Universidad de Guadalajara Derechos reservados 1997-2012.</div>
 					<!-- Social -->
 					<ul class="social ">
 						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>

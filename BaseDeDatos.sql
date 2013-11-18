@@ -11,7 +11,7 @@ use database cutonala;
                                       FOREIGN KEY (id_sede) REFERENCES Sede(id)) ENGINE=INNODB;
 
         create table Grupo(id int(10) not null Auto_increment primary key, Nombre varchar(5) not null,
-                               Aula varchar(5) not null, id_Licenciatura int(10) not null,Turno varchar(5) not null,
+                               Aula varchar(5) not null, Grado varchar(5) not null, id_Licenciatura int(10) not null,Turno varchar(5) not null,
                                FOREIGN KEY (id_Licenciatura) REFERENCES Licenciatura(id)) ENGINE=INNODB;
 
         create table Estudiante(id int(10) not null Auto_increment primary key,
@@ -63,3 +63,13 @@ seleccionar Grupo y grado
 select Codigo,Nombre,Ap_Paterno, Ap_Materno, voto FROM Estudiante,Grupo WHERE id_Grupo=Grupo.id;
 selccionar turno
 select Codigo,Nombre,Ap_Paterno, Ap_Materno, voto FROM Estudiante,Grupo WHERE id_Grupo=Grupo.id and turno="Matutino";
+
+update Estudiante set Codigo = '207630719', Nombre = 'Joel Emmanuel', Ap_Paterno = 'Valdivia', 
+   Ap_Materno = 'Ramirez', id_Grupo = 7, id_Licenciatura = 5, id_Sede = 2 where id=1;
+
+   update Estudiante set Codigo = '218934648', Nombre = 'Marimar', Ap_Paterno = 'Coco', 
+    Ap_Materno = 'Aguarras', id_Grupo = 7, id_Licenciatura = 5, id_Sede = 2 where id=3;
+    
+ update Estudiante set Codigo = '207533749', Nombre = 'Marco', Ap_Paterno = 'Grijalva', 
+  Ap_Materno = 'Reynoso', id_Grupo = 7, id_Licenciatura = 5, id_Sede = 2 where id=2;
+

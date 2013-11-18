@@ -13,10 +13,11 @@ require_once('listarContactos.php');
 <!DOCTYPE  html>
 <html>
 	<head>
-	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="shortcut icon" href="favicon.png"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/> 
+				<meta charset="utf-8">
 		<title>EED | Alumnos Por Votar</title>
-		
+	
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/social-icons.css" type="text/css" media="screen" />
@@ -112,7 +113,7 @@ require_once('listarContactos.php');
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="#">
+						<form  method="get" id="searchform" action="Buscador.php">
 							<div>
 								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
 								<input type="submit" id="searchsubmit" value=" " />
@@ -205,11 +206,7 @@ require_once('listarContactos.php');
 
 
 		 <?php
-            
-  $link = @mysql_connect("localhost", "root","")
-      or die ("Error al conectar a la base de datos.");
-  @mysql_select_db("cutonala", $link)
-      or die ("Error al conectar a la base de datos.");
+     
             $modelo = new Contacto();
             $contactos = $modelo->encontrarEspecifico();
 

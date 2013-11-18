@@ -1,0 +1,24 @@
+ body{
+	background: #f1f1f1;
+}
+#head{
+	margin-top: 2%;
+}
+ #lblusu{
+    margin-left: 45%;
+    font-family: times, serif; 
+    font-size:14pt;
+     font-style:italic;
+  }
+  #cerrarsesion{
+    margin-left: 2%;
+    background-color: white;
+    color: grey;
+    margin-top: -8%;
+    margin-left: 25%;
+    
+  }
+  #cabecera{
+  	margin-top: 2%;
+	background: #2a2d30;
+}

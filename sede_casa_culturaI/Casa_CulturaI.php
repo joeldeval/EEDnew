@@ -1,14 +1,15 @@
 <?php
 session_start();
 if(!isset($_SESSION['usuario'])){
-	header("Location: principal.php");
+	header("Location: ../principal.php");
 }
 ?>
 
 <html>
 	<head>
+	<link rel="shortcut icon" href="../favicon.png" />
 		<meta charset="utf-8">
-		<title>EED | Sede Casa Cultura I</title>
+		<title>EED | Casa Cultura</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
@@ -100,12 +101,12 @@ if(!isset($_SESSION['usuario'])){
 					<br/>
 		
 					<?php
-  echo "<form id='head' method='post' action='cerrarsesion.php'>
+  echo "<form id='head' method='post' action='../cerrarsesion.php'>
      <label id='lblusu'> Bienvenido ".$_SESSION['usuario']."</label><br/>
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="../Buscador.php">
+						<form  method="get" id="searchform" action="#">
 							<div>
 								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
 								<input type="submit" id="searchsubmit" value=" " />
@@ -137,7 +138,7 @@ if(!isset($_SESSION['usuario'])){
 							
 								</li>
 							</li>
-							<li><a href="Casa_CulturaI.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a href="Casa_CulturaI.php">Alumnos<span class="subheader">Casa Cultura I</span></a>
 								<ul>
 									
 									<li><a href="porvotarCasaCulturaI.php"><span>Por Votar(Casa Cultura I)</span></a></li>
@@ -149,12 +150,12 @@ if(!isset($_SESSION['usuario'])){
                             
                             
                             	<!-- sedes -->
-                            <li class="current-menu-item"><a href="../sede.php">Sede<span class="subheader">Alterna</span></a>
+                            <li class="current-menu-item"><a href="../sede.php">Sede<span class="subheader">Casa Cultura I</span></a>
 								<ul>
 									
 									<li><a href="../sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="../sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
-                                    <li><a href="../sede_santa_paula/santa_paula.php"><span>Santa Paula</span></a></li>
+                                    <li><a href="../sede_sillitas/Sillitas.php"><span>Sillitas</span></a></li>
+                                    <li><a href="../sede_santa_paula/Santa_Paula.php"><span>Santa Paula</span></a></li>
 									
 								</ul>
 							</li>
@@ -162,25 +163,23 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+							<li><a href="../carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
-									<li><a href="../Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="../medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
+									<li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                      <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
                                      <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
-									 <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
-                                    <li><a href="../Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="../Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="../Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
                                        <li><a href="../Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
                                         <li><a href="../Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="../Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
+                                         <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del Arte</span></a></li>
 									
 								</ul>
 							</li>
-     
+
+ 	<!-- Grado y grupo --> 
+
+
+                            
                             
 						</ul>
 
@@ -191,7 +190,7 @@ if(!isset($_SESSION['usuario'])){
 					<!-- Social -->
 					<ul class="social ">
 						<li><a href="https://www.facebook.com/centrouniversitariodetonala" class="poshytip  facebook" title="ME GUSTA"></a></li>
-						<li><a href="https://www.youtube.com/watch?v=LEso6YsTM_Y" class="poshytip youtube" title="Ve Nuestros Videos"></a></li>
+						<li><a href="http://www.youtube.com/user/Cutonala?feature=watch" class="poshytip youtube" title="Ve Nuestros Videos"></a></li>
 					</ul>
 					<!-- ENDS Social -->
 				
@@ -231,57 +230,51 @@ if(!isset($_SESSION['usuario'])){
 											
 						<!-- Aqui va el titulo y parrafo del contenido -->
 						<div class="one-half">
-              <table><tr>
-<th align="center"><font face="verdana"><b>CODIGO</b></font></th>
-<th align="center"><font face="verdana"><b>NOMBRE</b></font></th>
-<th><font face="verdana"><b>APELLIDOP</b></font></th>
-<th><font face="verdana"><b>APELLIDOM</b></font></th>
-<th><font face="verdana"><b>VOTO</b></font></th>
-</tr>
                 <?php  
 		include ("../conexion.php");
-  $link = @mysql_connect("localhost", "root","")
+  $link = @mysql_connect("localhost", "root","Joel10")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
 mysql_query("SET NAMES 'UTF8'");
-  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante,Sede,Urnas WHERE Sede.id=id_Sede AND Sede.id=1 AND Urnas.id_Estudiante=Estudiante.id";
+  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante,Sede,Urnas 
+  WHERE Sede.id=id_Sede AND Sede.id=1 AND Urnas.id_Estudiante=Estudiante.id";
 	 
   $result1 = mysql_query($query) or die (mysql_error());
   
-	  
-  $numero = 0;
-  $voto=0;
-  $Novoto=0;
-  while($row = mysql_fetch_array($result1))
-  {
-    echo "<tr><td width=\"25%\"><font face=\"verdana\">" .        $row["Codigo"] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" . 
-	    $row["Nombre"] . "</font></td>";
-	echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["Ap_Paterno"] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["Ap_Materno"] . "</font></td>";
-       if($row["voto"]==1){
-                        echo '<td align="center"><input type="radio" value="VOTO" checked></td>';
-                    
-               
-                    
-	   $voto++;
-  }else{
-  	         echo '<td align="center"><input type="radio" value="VOTO"></td>';
-  $Novoto++;
-  }
-    $numero++;
-  }
+  //consulta alumnos que NO votaron 
 
-	  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
-      "</b></font></td></tr>";
-	  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Alumnos que votaron: " . $voto . 
-      "</b></font></td></tr>";
-	   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Alumnos sin votar: " . $Novoto . 
-      "</b></font></td></tr>";
+
 	  
-	 
+	  //consulta alumnos que votaron 
+	  echo "<table>
+              <tr>
+                <th>CODIGO</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO PATERNO</th>
+                <th>APELLIDO MATERNO</th>
+                <th>VOTO</th>
+              </tr>";
   
+  $numero = 0;
+ while($row = mysql_fetch_array($result1))
+  {
+    echo "  <tr><td>" .$row["Codigo"] . "</td>";
+    echo "      <td>" .$row["Nombre"] . "</td>";
+	echo "      <td>" .$row["Ap_Paterno"] . "</td>";
+    echo "      <td>" .$row["Ap_Materno"] . "</td>";
+    if ($row["voto"]==1) {
+    	 echo "      <td align='center'><input type='radio' value='VOTO' checked></td></tr>";
+    }else{
+    echo "      <td align='center'><input type='radio' value='VOTO'></td>
+             </tr>";
+         }
+$numero++;
+  }
+	 
+  echo "</table>";
+ echo "<tr><td><b>TOTAL: " . $numero . 
+      "</b></font></td></tr>";
   mysql_free_result($result1);
   mysql_close($link);
 ?>
@@ -303,11 +296,11 @@ mysql_query("SET NAMES 'UTF8'");
 			<!-- ENDS MAIN -->
 			
 			<!-- Twitter -->
-			<div id="twitter">
+		<div id="twitter">
 				<div class="wrapper">
 					<a href="#" id="prev-tweet"></a>
 					<a href="#" id="next-tweet"></a>
-					<img id="bird" src="../img/bird.png" alt="Tweets" />
+					<img id="bird" src="../img/logoudg.png" alt="Tweets" />
 					<div id="tweets">
 						<ul class="tweet_list"></ul>
 					</div>
@@ -316,18 +309,16 @@ mysql_query("SET NAMES 'UTF8'");
 			<!-- ENDS Twitter -->
 
 			
-			
-		
 		
 			<!-- Bottom -->
-				<div id="bottom">
+			<div id="bottom">
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
-					<div id="bottom-text">CUTonal&aacute; 2013 --- Todos los derechos reservados --- </div>
+					<div id="bottom-text">Universidad de Guadalajara Derechos reservados 1997-2012.</div>
 					<!-- Social -->
 					<ul class="social ">
-						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>
-						<li><a href="https://www.youtube.com/watch?v=LEso6YsTM_Y" class="poshytip youtube" title="View our videos"></a></li>
+						<li><a href="https://www.facebook.com/centrouniversitariodetonala" class="poshytip  facebook" title="Become a fan"></a></li>
+						<li><a href="http://www.youtube.com/user/Cutonala?feature=watch" class="poshytip youtube" title="View our videos"></a></li>
 					</ul>
 					<!-- ENDS Social -->
 					<div id="to-top" class="poshytip" title="To top"></div>

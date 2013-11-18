@@ -268,12 +268,13 @@ if(!isset($_SESSION['usuario'])){
 </tr>
                 <?php  
 		include ("../conexion.php");
-  $link = @mysql_connect("localhost", "root","")
+  $link = @mysql_connect("localhost", "root","Joel10")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
 mysql_query("SET NAMES 'UTF8'");
-  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante,Licenciatura,Urnas WHERE Licenciatura.id=id_Licenciatura AND Licenciatura.id=2 AND Urnas.id_Estudiante=Estudiante.id";
+  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante,Licenciatura,Urnas 
+  WHERE Licenciatura.id=id_Licenciatura AND Licenciatura.id=2 AND Urnas.id_Estudiante=Estudiante.id";
 	 
   $result1 = mysql_query($query) or die (mysql_error());
   

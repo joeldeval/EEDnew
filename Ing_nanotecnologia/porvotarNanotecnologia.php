@@ -166,7 +166,7 @@ if(!isset($_SESSION['usuario'])){
 							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
-									<li><a href="../Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="../Lic_salud_publica/salud_publica.php"><span>Lic. Salud Publica</span></a></li>
 									<li><a href="../Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
                                     <li><a href="nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
                                      <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>

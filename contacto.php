@@ -9,12 +9,9 @@ class Contacto
     public $direccion;
     public $telefono;
     public $cp;
-	
-	
 
     public function encontrarTodos()
     {
-	$numero=0;
         try
         {
 
@@ -46,11 +43,11 @@ class Contacto
             return array();
         } 
     }
-	
-public function encontrarEspecifico()
+
+    public function encontrarEspecifico()
     {
-	$especific = $_GET['s'];
-	$numero=0;
+    $especific = $_GET['s'];
+    $numero=0;
         try
         {
 
@@ -61,7 +58,8 @@ public function encontrarEspecifico()
             {
                 throw new Exception($conexion->getError());
             }
-            $sql = "SELECT id, Codigo, Nombre, Ap_Paterno, Ap_Materno, voto from Estudiante, Urnas where Urnas.id_Estudiante=Estudiante.id AND Ap_Paterno LIKE '%$especific%'";
+            $sql = "SELECT Codigo, Nombre, Ap_Paterno, Ap_Materno, voto from Estudiante, Urnas 
+            where Urnas.id_Estudiante=Estudiante.id AND Codigo LIKE '%$especific%'";
             if ($result = $conexion->mysqli->query($sql))
             {
                 if ($result->num_rows > 0) 
@@ -82,6 +80,7 @@ public function encontrarEspecifico()
             return array();
         } 
     }
+
 
   
     }

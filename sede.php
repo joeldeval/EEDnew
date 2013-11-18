@@ -9,7 +9,7 @@ if(!isset($_SESSION['usuario'])){
 	<head>
 	<link rel="shortcut icon" href="favicon.png" />
 		<meta charset="utf-8">
-		<title>EED | Inicio</title>
+		<title>EED | Sedes</title>
  <script src="jquery-ui/js/jquery-1.9.1.js"></script>
     <script src="jquery-ui/js/jquery-ui.js"></script>
     <script src="ajax-jquery.js"></script>
@@ -109,7 +109,7 @@ if(!isset($_SESSION['usuario'])){
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="#">
+						<form  method="get" id="searchform" action="Buscador.php">
 							<div>
 								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
 								<input type="submit" id="searchsubmit" value=" " />
@@ -139,11 +139,11 @@ if(!isset($_SESSION['usuario'])){
 							<li><a href="index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
-							<li><a id="Alumnos" href="alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a id="Alumnos" href="alumnos.php">Alumnos<span class="subheader">Todas las Sedes</span></a>
 								<ul>
 									
-									<li><a href="porvotar.php"><span>Por Votar</span></a></li>
-									<li><a href="votaron.php"><span>Votaron</span></a></li>
+									<li><a href="porvotar.php"><span>Aún no han Votado</span></a></li>
+									<li><a href="votaron.php"><span>Ya Votaron</span></a></li>
 									
 								</ul>
 							</li>
@@ -155,9 +155,9 @@ if(!isset($_SESSION['usuario'])){
 								<ul>
 									
 									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
-									<li><a href="votaron.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="votaron.php"><span>Sillitas</span></a></li>
-                                    <li><a href="votaron.php"><span>Santa Paula</span></a></li>
+									<li><a href="sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
+                                    <li><a href="sede_sillitas/Sillitas.php"><span>Sillitas</span></a></li>
+                                    <li><a href="sede_santa_paula/Santa_Paula.php"><span>Santa Paula</span></a></li>
 									
 								</ul>
 							</li>
@@ -217,9 +217,9 @@ if(!isset($_SESSION['usuario'])){
 							<p>   
 							
 							<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
-									<li><a href="votaron.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="votaron.php"><span>Sillitas</span></a></li>
-                                    <li><a href="votaron.php"><span>Santa Paula</span></a></li>
+									<li><a href="sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
+                                   <li><a href="sede_sillitas/Sillitas.php"><span>Sillitas</span></a></li>
+                                    <li><a href="sede_santa_paula/Santa_Paula.php"><span>Santa Paula</span></a></li>
                             
 							</p>
 						</div>
@@ -244,52 +244,25 @@ if(!isset($_SESSION['usuario'])){
 			<!-- ENDS MAIN -->
 			
 			<!-- Twitter -->
-			<div id="twitter">
+		<div id="twitter">
 				<div class="wrapper">
 					<a href="#" id="prev-tweet"></a>
 					<a href="#" id="next-tweet"></a>
-					<img id="bird" src="img/bird.png" alt="Tweets" />
+					<img id="bird" src="img/logoudg.png" alt="Tweets" />
 					<div id="tweets">
 						<ul class="tweet_list"></ul>
 					</div>
 				</div>
 			</div>
 			<!-- ENDS Twitter -->
-<div id="footer">
-				<!-- wrapper-footer -->
-				<div class="wrapper">
-					<!-- footer-cols -->
-					<ul id="footer-cols">
-						<li class="col">
-							<h6>Páginas</h6>
-							<ul>
-								<li class="page_item"><a href="index.html">¿Quiénes somos?</a></li>
-											
-							    <li class="page_item"><a href="mision.html">Propósito</a></li>
-								<li class="page_item"><a href="blog.html">Blog</a></li>
-								<li class="page_item"><a href="gallery.html">Galería</a></li>
-								<li class="page_item"><a href="contact.html">Contacto</a></li>
 
-							</ul>
-				
-						</li>
-						
-					
-						
-						
-					</ul>
-					<!-- ENDS footer-cols -->
-				</div>
-				<!-- ENDS wrapper-footer -->
-			</div>
-			
 			
 		
 			<!-- Bottom -->
 			<div id="bottom">
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
-					<div id="bottom-text">Universidad de Guadalajara © Derechos reservados ©1997-2012.</div>
+					<div id="bottom-text">Universidad de Guadalajara Derechos reservados 1997-2012.</div>
 					<!-- Social -->
 					<ul class="social ">
 						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>
