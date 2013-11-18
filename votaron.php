@@ -146,13 +146,13 @@ if(!isset($_SESSION['usuario'])){
 							</li>                          
                             
                             	<!-- sedes -->
-                            <li><a href="alumnos.php">Sede<span class="subheader">Alterna</span></a>
+                            <li><a href="sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
 									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
-									<li><a href="votaron.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="votaron.php"><span>Sillitas</span></a></li>
-                                    <li><a href="votaron.php"><span>Santa Paula</span></a></li>
+									<li><a href="sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
+                                    <li><a href="sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
+                                    <li><a href="sede_santa_paula/santa_paula.php"><span>Santa Paula</span></a></li>
 									
 								</ul>
 							</li>
@@ -160,51 +160,25 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+							<li><a href="carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
-									<li><a href="porvotar.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="votaron.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="votaron.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="votaron.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="votaron.php"><span>Ing. Ciencias Computacionales</span></a></li>
-                                    <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="votaron.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="votaron.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="votaron.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="votaron.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="votaron.php"><span>Lic. Abogado</span></a></li>
-                                          <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+									<li><a href="Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
+									 <li><a href="Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
+                                    <li><a href="Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
 									
 								</ul>
 							</li>
 
- 	<!-- Grado y grupo --> 
-
-<li><a href="alumnos.php">Grado y Grupo<span class="subheader">Aulas</span></a>
-								<ul>
-									
-									<li><a href="porvotar.php"><span>1ero A</span></a></li>
-									<li><a href="votaron.php"><span>1ero B</span></a></li>
-                                    <li><a href="votaron.php"><span>2do A</span></a></li>
-                                    <li><a href="votaron.php"><span>2do B</span></a></li>
-                                     <li><a href="votaron.php"><span>3ero A</span></a></li>
-                                      <li><a href="votaron.php"><span>3ero B</span></a></li>
-                                       <li><a href="votaron.php"><span>4to A</span></a></li>
-                                        <li><a href="votaron.php"><span>4to B</span></a></li>
-									
-								</ul>
-							</li>
-                            
-                            
-                           <li><a href="alumnos.php">Turno<span class="subheader">Matutino Vespertino</span></a>
-								<ul>
-									
-									<li><a href="porvotar.php"><span>Matutino</span></a></li>
-									<li><a href="votaron.php"><span>Vespertino</span></a></li>
-									
-								</ul>
-							</li> 
 						</ul>
 
 						<div id="bottom">
@@ -241,23 +215,74 @@ if(!isset($_SESSION['usuario'])){
 					<!-- content -->
 					<div id="content">
 						
-						<!-- title -->
-						<div id="page-title">
-							<span class="title">Visi&oacute;n</span>
-							
-						</div>
-						<!-- ENDS title -->
-		<div id="page-content">
+					<!-- title -->
+					<div id="page-title">
+						<span class="title">Alumnos Votaron</span>
+					</div>
+					<!-- ENDS title -->
+
+					<!-- page-content -->
+					<div id="page-content">
 											
-						<!-- 2 cols -->
+						<!-- Aqui va el titulo y parrafo del contenido -->
 						<div class="one-half">
-							<h6 class="line-divider">Nuestra Visi&oacute;n </h6>
-							<p>Ser reconocidos como la empresa que brinda el mejor servicio y <br/>
-							 la mejor calidad en materia de anuncios luminosos.</p>
-						</div>
-						
-						</div>
-					
+              <table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt"><tr>
+<th><font face="verdana"><b>CODIGO</b></font></th>
+<th><font face="verdana"><b>NOMBRE</b></font></th>
+<th><font face="verdana"><b>APELLIDOP</b></font></th>
+<th><font face="verdana"><b>APELLIDOM</b></font></th>
+<th><font face="verdana"><b>VOTO</b></font></th>
+<th><font face="verdana"><b>MESA</b></font></th>
+</tr>
+                <?php  
+
+		include ("../conexion.php");
+  $link = @mysql_connect("localhost", "root","")
+      or die ("Error al conectar a la base de datos.");
+  @mysql_select_db("cutonala", $link)
+      or die ("Error al conectar a la base de datos.");
+ mysql_query("SET NAMES 'UTF8'");
+  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante, Urnas WHERE Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=1";
+	 
+  $result1 = mysql_query($query) or die (mysql_error());
+  
+  
+	  
+  $numero = 0;
+  $voto=0;
+  $Novoto=0;
+  while($row = mysql_fetch_array($result1))
+  {
+    echo "<tr><td width=\"25%\"><font face=\"verdana\">" .        $row["Codigo"] . "</font></td>";
+    echo "<td width=\"25%\"><font face=\"verdana\">" . 
+	    $row["Nombre"] . "</font></td>";
+	echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["Ap_Paterno"] . "</font></td>";
+    echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["Ap_Materno"] . "</font></td>";
+    echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["voto"] . "</font></td>";
+       if($row["voto"]==1){
+	   $voto++;
+  }else{
+  $Novoto++;
+  }
+    $numero++;
+  }
+  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
+      "</b></font></td></tr>";
+	 
+	 
+  
+  mysql_free_result($result1);
+  mysql_close($link);
+?>
+              </p>
+			</div>
+			</table>
+					</div>
+						<div class="clear "></div>
+						<!-- ENDS 1/4 cols -->
+	
+					</div>
+					<!-- ENDS page-content -->
 		
 					</div>
 					<!-- ENDS content -->

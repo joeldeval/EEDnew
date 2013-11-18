@@ -109,10 +109,10 @@ if(!isset($_SESSION['usuario'])){
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="#">
+						<form  method="get" id="searchform"  action="Buscador.php">
 							<div>
-								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
-								<input type="submit" id="searchsubmit" value=" " />
+								<input type="text" value="Search..." name="especific" id="s" onfocus="defaultInput(this)" onblur="clearInput(this) "  /> 
+								<input type="submit" id="searchsubmit" value=""/>
 							</div>
 						</form>
 					</div>
@@ -155,9 +155,9 @@ if(!isset($_SESSION['usuario'])){
 								<ul>
 									
 									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
-									<li><a href="votaron.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="votaron.php"><span>Sillitas</span></a></li>
-                                    <li><a href="votaron.php"><span>Santa Paula</span></a></li>
+									<li><a href="sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
+                                    <li><a href="sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
+                                    <li><a href="sede_santa_paula/santa_paula.php"><span>Santa Paula</span></a></li>
 									
 								</ul>
 							</li>
@@ -168,18 +168,18 @@ if(!isset($_SESSION['usuario'])){
 							<li><a href="carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
-									<li><a href="porvotar.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="votaron.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="votaron.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="votaron.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="votaron.php"><span>Ing. Ciencias Computacionales</span></a></li>
-                                    <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="votaron.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="votaron.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="votaron.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="votaron.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="votaron.php"><span>Lic. Abogado</span></a></li>
-                                          <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+									<li><a href="Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
+									 <li><a href="Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
+                                    <li><a href="Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
 									
 								</ul>
 							</li>

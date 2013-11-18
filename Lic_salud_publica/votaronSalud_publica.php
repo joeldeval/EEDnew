@@ -8,7 +8,7 @@ if(!isset($_SESSION['usuario'])){
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>EED | Por votar sede casa cultura I</title>
+		<title>EED | Votaron Lic. Salud Publica</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
@@ -105,7 +105,7 @@ if(!isset($_SESSION['usuario'])){
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="Buscador.php">
+						<form  method="get" id="searchform" action="../Buscador.php">
 							<div>
 								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
 								<input type="submit" id="searchsubmit" value=" " />
@@ -133,26 +133,25 @@ if(!isset($_SESSION['usuario'])){
 						<!-- Navigation -->
                        
 						<ul id="nav" class="sf-menu">
-							<li ><a href="../index.php">Inicio<span class="subheader">Bienvenido</span></a>
+							<li><a href="../index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
 							</li>
 							<li><a href="../alumnos.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
-									
-									<li><a href="votaronCasaCulturaI.php"><span>Votaron(Casa Cultura I)</span></a></li>
+									<li><a href="porvotarSalud_publica.php"><span>Por Votar(Salud Publica)</span></a></li>
 									
 								</ul>
 							</li>
-							
+				
                             
                             
                             	<!-- sedes -->
-                            <li class="current-menu-item"><a href="Casa_cultura_I.php">Sede<span class="subheader">Alterna</span></a>
+                            <li  class="current-menu-item"><a href="../alumnos.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
-									<li><a href="Casa_cultura_I.php"><span>Casa Cultura I</span></a></li>
+									<li><a href="../sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
 									<li><a href="../sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
                                     <li><a href="../sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
                                     <li><a href="../sede_santa_paula/santa_paula.php"><span>Santa Paula</span></a></li>
@@ -166,8 +165,8 @@ if(!isset($_SESSION['usuario'])){
 							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
-									<li><a href="../Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="../medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+									<li><a href="Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="../Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
                                     <li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
                                      <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
                                      <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
@@ -181,8 +180,8 @@ if(!isset($_SESSION['usuario'])){
 									
 								</ul>
 							</li>
-							
-							</ul>
+                    
+						</ul>
 
 							<div id="bottom">
 				<!-- wrapper-bottom -->
@@ -222,7 +221,7 @@ if(!isset($_SESSION['usuario'])){
 						
 					<!-- title -->
 					<div id="page-title">
-						<span class="title">Casa de la Cultura I Alumnos por votar</span>
+						<span class="title">Lic. Salud Publica Alumnos votaron</span>
 					</div>
 					<!-- ENDS title -->
 
@@ -232,22 +231,21 @@ if(!isset($_SESSION['usuario'])){
 						<!-- Aqui va el titulo y parrafo del contenido -->
 						<div class="one-half">
               <table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt"><tr>
-<th><font face="verdana"><b>CODIGO</b></font></th>
-<th><font face="verdana"><b>NOMBRE</b></font></th>
-<th><font face="verdana"><b>APELLIDOP</b></font></th>
-<th><font face="verdana"><b>APELLIDOM</b></font></th>
-<th><font face="verdana"><b>VOTO</b></font></th>
-<th><font face="verdana"><b>MESA</b></font></th>
+<td><font face="verdana"><b>CODIGO</b></font></td>
+<td><font face="verdana"><b>NOMBRE</b></font></td>
+<td><font face="verdana"><b>APELLIDOP</b></font></td>
+<td><font face="verdana"><b>APELLIDOM</b></font></td>
+<td><font face="verdana"><b>VOTO</b></font></td>
+<td><font face="verdana"><b>MESA</b></font></td>
 </tr>
                 <?php  
-
 		include ("../conexion.php");
   $link = @mysql_connect("localhost", "root","")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
- mysql_query("SET NAMES 'UTF8'");
-  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante, Sede, Urnas WHERE Sede.id=id_Sede AND Sede.id=1 AND Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=0";
+
+  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno,Urnas.voto FROM Estudiante,Licenciatura,Urnas WHERE Licenciatura.id=id_Licenciatura AND Licenciatura.id=1 AND Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=1";
 	 
   $result1 = mysql_query($query) or die (mysql_error());
   
@@ -273,11 +271,11 @@ if(!isset($_SESSION['usuario'])){
   }
   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
       "</b></font></td></tr>";
-	 
+	  
+	  
 	 
   
   mysql_free_result($result1);
-  
   mysql_close($link);
 ?>
               </p>

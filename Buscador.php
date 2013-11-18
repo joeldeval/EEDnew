@@ -3,12 +3,18 @@ session_start();
 if(!isset($_SESSION['usuario'])){
 	header("Location: principal.php");
 }
+
+
+require_once('contacto.php');
+require_once('listarContactos.php');
 ?>
+
+
 <!DOCTYPE  html>
 <html>
 	<head>
 	<link rel="shortcut icon" href="favicon.png" />
-		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/> 
 		<title>EED | Alumnos Por Votar</title>
 		
 		<!-- CSS -->
@@ -146,41 +152,8 @@ if(!isset($_SESSION['usuario'])){
 							</li>                          
                             
                             	<!-- sedes -->
-                            <li><a href="sede.php">Sede<span class="subheader">Alterna</span></a>
-								<ul>
-									
-									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
-									<li><a href="sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
-                                    <li><a href="sede_santa_paula/santa_paula.php"><span>Santa Paula</span></a></li>
-									
-								</ul>
-							</li>
-                            
-                            
-                           	<!-- carreras --> 
-                            
-							<li><a href="carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
-								<ul>
-									
-									<li><a href="Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
-									 <li><a href="Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
-                                    <li><a href="Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
-									
-								</ul>
-							</li>
- 	
-
-
+                           
+						
 						</ul>
 						<div id="bottom">
 				<!-- wrapper-bottom -->
@@ -218,67 +191,40 @@ if(!isset($_SESSION['usuario'])){
 						
 					<!-- title -->
 					<div id="page-title">
-						<span class="title">Alumnos por votar</span>
+						<span class="title">B&Uacute;SQUEDA</span>
 					</div>
 					<!-- ENDS title -->
 
 					<!-- page-content -->
 					<div id="page-content">
 											
-						<!-- Aqui va el titulo y parrafo del contenido -->
+						<!-- 2 cols -->
 						<div class="one-half">
-              <table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt"><tr>
-<th><font face="verdana"><b>CODIGO</b></font></th>
-<th><font face="verdana"><b>NOMBRE</b></font></th>
-<th><font face="verdana"><b>APELLIDOP</b></font></th>
-<th><font face="verdana"><b>APELLIDOM</b></font></th>
-<th><font face="verdana"><b>VOTO</b></font></th>
-<th><font face="verdana"><b>MESA</b></font></th>
-</tr>
-                <?php  
+							<h6 class="line-divider">Todos Los Alumnos </h6>
+							<p>   
 
-		include ("../conexion.php");
+
+		 <?php
+            
   $link = @mysql_connect("localhost", "root","")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
- mysql_query("SET NAMES 'UTF8'");
-  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante, Urnas WHERE Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=0";
-	 
-  $result1 = mysql_query($query) or die (mysql_error());
-  
-  
-	  
-  $numero = 0;
-  $voto=0;
-  $Novoto=0;
-  while($row = mysql_fetch_array($result1))
-  {
-    echo "<tr><td width=\"25%\"><font face=\"verdana\">" .        $row["Codigo"] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" . 
-	    $row["Nombre"] . "</font></td>";
-	echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["Ap_Paterno"] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["Ap_Materno"] . "</font></td>";
-    echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["voto"] . "</font></td>";
-       if($row["voto"]==1){
-	   $voto++;
-  }else{
-  $Novoto++;
-  }
-    $numero++;
-  }
-  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
-      "</b></font></td></tr>";
-	 
-	 
-  
-  mysql_free_result($result1);
-  mysql_close($link);
-?>
-              </p>
-			</div>
-			</table>
-					</div>
+            $modelo = new Contacto();
+            $contactos = $modelo->encontrarEspecifico();
+
+
+            $listar = new ListarContactos();
+            $listar->contactos = $contactos;
+            $listar->generaTabla();
+
+          
+        ?>
+
+							</p>
+						</div>
+						
+						</div>
 						<div class="clear "></div>
 						<!-- ENDS 1/4 cols -->
 	
@@ -305,15 +251,14 @@ if(!isset($_SESSION['usuario'])){
 			</div>
 			<!-- ENDS Twitter -->
 
-			
-			
+			<!-- ENDS FOOTER -->
 		
 		
 			<!-- Bottom -->
 				<div id="bottom">
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
-					<div id="bottom-text">NEON 2013 --- Todos los derechos reservados --- </div>
+					<div id="bottom-text">Universidad de Guadalajara © Derechos reservados ©1997-2012.</div>
 					<!-- Social -->
 					<ul class="social ">
 						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>

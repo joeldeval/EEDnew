@@ -8,7 +8,7 @@ if(!isset($_SESSION['usuario'])){
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>EED | Alumnos Por Votar</title>
+		<title>EED | Sede Casa Cultura I</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
@@ -105,7 +105,7 @@ if(!isset($_SESSION['usuario'])){
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="#">
+						<form  method="get" id="searchform" action="../Buscador.php">
 							<div>
 								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
 								<input type="submit" id="searchsubmit" value=" " />
@@ -152,9 +152,9 @@ if(!isset($_SESSION['usuario'])){
                             <li class="current-menu-item"><a href="../sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
-									<li><a href="../votaron.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="../votaron.php"><span>Sillitas</span></a></li>
-                                    <li><a href="../votaron.php"><span>Santa Paula</span></a></li>
+									<li><a href="../sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
+                                    <li><a href="../sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
+                                    <li><a href="../sede_santa_paula/santa_paula.php"><span>Santa Paula</span></a></li>
 									
 								</ul>
 							</li>
@@ -165,26 +165,22 @@ if(!isset($_SESSION['usuario'])){
 							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
-									<li><a href="../porvotar.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="../votaron.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="../votaron.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="../votaron.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="../votaron.php"><span>Ing. Ciencias Computacionales</span></a></li>
-                                    <li><a href="../votaron.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="../votaron.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="../votaron.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="../votaron.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="../votaron.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="../votaron.php"><span>Lic. Abogado</span></a></li>
-                                          <li><a href="../votaron.php"><span>Lic. Gerontologia</span></a></li>
+									<li><a href="../Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="../medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
+									 <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
+                                    <li><a href="../Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="../Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="../Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="../Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="../Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="../Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
 									
 								</ul>
 							</li>
-
- 	<!-- Grado y grupo --> 
-
-
-                            
+     
                             
 						</ul>
 
@@ -244,26 +240,15 @@ if(!isset($_SESSION['usuario'])){
 </tr>
                 <?php  
 		include ("../conexion.php");
-  $link = @mysql_connect("localhost", "root","Joel10")
+  $link = @mysql_connect("localhost", "root","")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
 mysql_query("SET NAMES 'UTF8'");
-  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante,Sede,Urnas WHERE Sede.id=id_Sede AND Sede.id=2 AND Urnas.id_Estudiante=Estudiante.id";
+  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante,Sede,Urnas WHERE Sede.id=id_Sede AND Sede.id=1 AND Urnas.id_Estudiante=Estudiante.id";
 	 
   $result1 = mysql_query($query) or die (mysql_error());
   
-  //consulta alumnos que NO votaron 
-  $result2 = mysql_query("SELECT count(voto) from Urnas where voto=0") or die (mysql_error()); 
-  $sinvotar = mysql_fetch_row($result2);
-   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Nu TOTAL Alumnos sin votar: " . $sinvotar[0] . 
-      "</b></font></td></tr>";
-	  
-	  //consulta alumnos que votaron 
-  $result3 = mysql_query("SELECT count(voto) from Urnas where voto=1") or die (mysql_error()); 
-  $votar = mysql_fetch_row($result3);
-   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Nu TOTAL Alumnos votaron: " . $votar[0] . 
-      "</b></font></td></tr>";
 	  
   $numero = 0;
   $voto=0;
@@ -287,7 +272,8 @@ mysql_query("SET NAMES 'UTF8'");
   }
     $numero++;
   }
-  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
+
+	  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
       "</b></font></td></tr>";
 	  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Alumnos que votaron: " . $voto . 
       "</b></font></td></tr>";
@@ -297,8 +283,6 @@ mysql_query("SET NAMES 'UTF8'");
 	 
   
   mysql_free_result($result1);
-  mysql_free_result($result2);
-  mysql_free_result($result3);
   mysql_close($link);
 ?>
               </p>
@@ -339,7 +323,7 @@ mysql_query("SET NAMES 'UTF8'");
 				<div id="bottom">
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
-					<div id="bottom-text">NEON 2013 --- Todos los derechos reservados --- </div>
+					<div id="bottom-text">CUTonal&aacute; 2013 --- Todos los derechos reservados --- </div>
 					<!-- Social -->
 					<ul class="social ">
 						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>

@@ -16,10 +16,11 @@ class ListarContactos
 
         echo '<table>';
 
-  $link = @mysql_connect("localhost", "root","Joel10")
+  $link = @mysql_connect("localhost", "root","")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
+	  
   $result2 = mysql_query("SELECT count(voto) from Urnas where voto=0") or die (mysql_error()); 
   $numero = 0;
   $sinvotar = mysql_fetch_row($result2);
