@@ -10,7 +10,7 @@ if(!isset($_SESSION['usuario'])){
 	<link rel="shortcut icon" href="favicon.png" />
 		<meta charset="utf-8">
 
-		<title>EED | Votaron Casa cultura I</title>
+		<title>EED | Votaron </title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />

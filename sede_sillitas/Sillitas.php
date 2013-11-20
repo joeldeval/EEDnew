@@ -237,7 +237,7 @@ if(!isset($_SESSION['usuario'])){
 </tr>
                 <?php  
 		include ("../conexion.php");
-  $link = @mysql_connect("localhost", "root","Joel10")
+  $link = @mysql_connect("localhost", "root","")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
