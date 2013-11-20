@@ -8,7 +8,7 @@ if(!isset($_SESSION['usuario'])){
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>EED | Por votar Ing. Nanotecnologia</title>
+		<title>EED | Por votar Ing. Ciencias Computacionales</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
@@ -105,7 +105,7 @@ if(!isset($_SESSION['usuario'])){
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="Buscador.php">
+						<form  method="get" id="searchform" action="../Buscador.php">
 							<div>
 								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
 								<input type="submit" id="searchsubmit" value=" " />
@@ -133,23 +133,22 @@ if(!isset($_SESSION['usuario'])){
 						<!-- Navigation -->
                        
 						<ul id="nav" class="sf-menu">
-							<li ><a href="../index.php">Inicio<span class="subheader">Bienvenido</span></a>
+							<li><a href="../index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
 							</li>
-							<li><a href="../alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a href="ciencias_computo.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
-									
-									<li><a href="votaronNanotecnologia.php"><span>Votaron(Nanotecnologia)</span></a></li>
+									<li><a href="votaronCienciasComputacionales.php"><span>Votaron(Ciencias Computacionales)</span></a></li>
 									
 								</ul>
 							</li>
-							
+				
                             
                             
                             	<!-- sedes -->
-                            <li class="current-menu-item"><a href="Casa_cultura_I.php">Sede<span class="subheader">Alterna</span></a>
+                            <li  class="current-menu-item"><a href="../sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
 									<li><a href="../sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
@@ -163,12 +162,12 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+							<li><a href="../carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
 									<li><a href="../Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
 									<li><a href="../Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                    <li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
                                      <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
                                      <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
 									 <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
@@ -181,8 +180,9 @@ if(!isset($_SESSION['usuario'])){
 									
 								</ul>
 							</li>
-							
-							</ul>
+                    
+						</ul>
+
 
 							<div id="bottom">
 				<!-- wrapper-bottom -->
@@ -222,7 +222,7 @@ if(!isset($_SESSION['usuario'])){
 						
 					<!-- title -->
 					<div id="page-title">
-						<span class="title">Ing. Nanotecnolog&iacute;a Alumnos por votar</span>
+						<span class="title">Ing. Ciencias Computacionales Alumnos por votar</span>
 					</div>
 					<!-- ENDS title -->
 
@@ -247,7 +247,8 @@ if(!isset($_SESSION['usuario'])){
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
  mysql_query("SET NAMES 'UTF8'");
-  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno,Urnas.voto FROM Estudiante,Licenciatura,Urnas WHERE Licenciatura.id=id_Licenciatura AND Licenciatura.id=3 AND Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=0";
+  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno,Urnas.voto FROM Estudiante,Licenciatura,Urnas WHERE Licenciatura.id=id_Licenciatura 
+  AND Licenciatura.id=5 AND Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=0";
 	 
   $result1 = mysql_query($query) or die (mysql_error());
   

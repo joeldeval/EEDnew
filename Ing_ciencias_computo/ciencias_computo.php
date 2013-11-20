@@ -9,7 +9,7 @@ if(!isset($_SESSION['usuario'])){
 	<head>
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="../favicon.png" />
-		<title>EED | Ing. Nanotecnología</title>
+		<title>EED | Ing. Ciencias Computacionales</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
@@ -138,11 +138,11 @@ if(!isset($_SESSION['usuario'])){
 							
 								</li>
 							</li>
-							<li><a href="nanotecnologia.php">Alumnos<span class="subheader">Nanotecnología</span></a>
+							<li><a href="ciencias_computo.php">Alumnos<span class="subheader">Ciencias Computacionales</span></a>
 								<ul>
 									
-									<li><a href="porvotarNanotecnologia.php"><span>Por Votar(Nanotecnolog&iacute;a)</span></a></li>
-									<li><a href="votaronNanotecnologia.php"><span>Votaron(Nanotecnolog&iacute;a)</span></a></li>
+									<li><a href="porvotarCienciasComputacionales.php"><span>Por Votar(Ciencias Computacionales)</span></a></li>
+									<li><a href="votaronCienciasComputacionales.php"><span>Votaron(Ciencias Computacionales)</span></a></li>
 									
 								</ul>
 							</li>
@@ -150,7 +150,7 @@ if(!isset($_SESSION['usuario'])){
                             
                             
                             	<!-- sedes -->
-                            <li ><a href="../sede.php">Sede<span class="subheader">Casa Cultura I</span></a>
+                            <li ><a href="../sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									<li><a href="../sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
 									<li><a href="../sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
@@ -163,14 +163,22 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li class="current-menu-item"><a href="../alumnos.php">Licenciatura<span class="subheader">Nanotecnología</span></a>
+							<li class="current-menu-item"><a href="../carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 				                  
-                                          <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
+                                          
+									<li><a href="../Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="../Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
+     
+									 <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
+                                    <li><a href="../Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="../Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="../Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
                                        <li><a href="../Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
                                         <li><a href="../Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del Arte</span></a></li>
+                                         <li><a href="../Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
 									
 								</ul>
 							</li>
@@ -178,7 +186,7 @@ if(!isset($_SESSION['usuario'])){
 							
 	 <!-- Grado y grupo --> 
 
-<li><a href="alumnos.php">Grado y Grupo<span class="subheader">Nanotecnología</span></a>
+<li><a href="alumnos.php">Grado y Grupo<span class="subheader">Ciencias Computacionales</span></a>
 								<ul>
 									
 									<li><a href="porvotar.php"><span>1ero A</span></a></li>
@@ -243,7 +251,7 @@ if(!isset($_SESSION['usuario'])){
 						
 					<!-- title -->
 					<div id="page-title">
-						<span class="title">Ing. Nanotecnolog&iacute;a</span>
+						<span class="title">Ing. Ciencias Computacionales</span>
 					</div>
 					<!-- ENDS title -->
 
@@ -261,13 +269,13 @@ if(!isset($_SESSION['usuario'])){
 </tr>
                 <?php  
 		include ("../conexion.php");
-  $link = @mysql_connect("localhost", "root","Joel10")
+  $link = @mysql_connect("localhost", "root","")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
 mysql_query("SET NAMES 'UTF8'");
   $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante,Licenciatura,Urnas 
-  WHERE Licenciatura.id=id_Licenciatura AND Licenciatura.id=3 AND Urnas.id_Estudiante=Estudiante.id";
+  WHERE Licenciatura.id=id_Licenciatura AND Licenciatura.id=5 AND Urnas.id_Estudiante=Estudiante.id";
 	 
   $result1 = mysql_query($query) or die (mysql_error());
   
