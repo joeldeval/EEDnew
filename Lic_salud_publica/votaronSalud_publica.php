@@ -133,25 +133,26 @@ if(!isset($_SESSION['usuario'])){
 						<!-- Navigation -->
                        
 						<ul id="nav" class="sf-menu">
-							<li><a href="../index.php">Inicio<span class="subheader">Bienvenido</span></a>
+							<li ><a href="../index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
 							</li>
-							<li><a href="../alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a href="salud_publica.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
+									
 									
 									<li><a href="porvotarSalud_publica.php"><span>Por Votar(Salud Publica)</span></a></li>
 									
 								</ul>
 							</li>
-				
+							
                             
                             
                             	<!-- sedes -->
-                            <li  class="current-menu-item"><a href="../alumnos.php">Sede<span class="subheader">Alterna</span></a>
+                            <li class="current-menu-item"><a href="sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
-									<li><a href="../sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
+									<li><a href="../sede_Casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
 									<li><a href="../sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
                                     <li><a href="../sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
                                     <li><a href="../sede_santa_paula/santa_paula.php"><span>Santa Paula</span></a></li>
@@ -162,7 +163,7 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+							<li><a href="../carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
 									<li><a href="Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
@@ -180,8 +181,8 @@ if(!isset($_SESSION['usuario'])){
 									
 								</ul>
 							</li>
-                    
-						</ul>
+							
+							</ul>
 
 							<div id="bottom">
 				<!-- wrapper-bottom -->

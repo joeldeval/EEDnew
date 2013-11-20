@@ -137,7 +137,7 @@ if(!isset($_SESSION['usuario'])){
 							
 								</li>
 							</li>
-							<li><a href="Casa_CulturaI.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a href="salud_publica.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
 									<li><a href="porvotarSalud_publica.php"><span>Por Votar(Salud publica)</span></a></li>
@@ -162,10 +162,10 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+							<li><a href="../carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 				
-									<li><a href="../medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+									<li><a href="../Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
                                     <li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
                                      <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
                                      <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>

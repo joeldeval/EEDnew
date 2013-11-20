@@ -9,7 +9,7 @@
 </head>
 <body>
 <fieldset id="cabecera">
- <form action="validar.php" method="post">
+ <form action="validar2.php" method="post">
 
       <a href="http://www.udg.mx" title="Ir a Universidad De Guadalajara"><img src="images/logo.png" alt="GIF" id="logoUDG"></a>
         <label id="lblusu1">USUARIO</label>

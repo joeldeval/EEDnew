@@ -4,12 +4,11 @@ if(!isset($_SESSION['usuario'])){
 	header("Location: principal.php");
 }
 ?>
-
+<!DOCTYPE  html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="shortcut icon" href="../favicon.png" />
-		<title>EED | Ing. Nanotecnología</title>
+		<title>EED | Votaron Lic Gerontologia</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
@@ -97,7 +96,7 @@ if(!isset($_SESSION['usuario'])){
 				<!-- wrapper-header -->
 				<div class="wrapper">
 					<a href="../index.html"><img id="logo" src="../images/dummylogo.png" alt="Nova" /></a>
-					<img id="logo1"  src="../images/logo1.png">
+					<img id="logo1" src="../images/logo1.png">
 					<br/>
 		
 					<?php
@@ -138,20 +137,20 @@ if(!isset($_SESSION['usuario'])){
 							
 								</li>
 							</li>
-							<li><a href="nanotecnologia.php">Alumnos<span class="subheader">Nanotecnología</span></a>
+							<li><a href="../gerontologia.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
-									<li><a href="porvotarNanotecnologia.php"><span>Por Votar(Nanotecnolog&iacute;a)</span></a></li>
-									<li><a href="votaronNanotecnologia.php"><span>Votaron(Nanotecnolog&iacute;a)</span></a></li>
+									<li><a href="porvotarGerontologia.php"><span>Por Votar(Gerontologia)</span></a></li>
 									
 								</ul>
 							</li>
-						
+				
                             
                             
                             	<!-- sedes -->
-                            <li ><a href="../sede.php">Sede<span class="subheader">Casa Cultura I</span></a>
+                            <li  class="current-menu-item"><a href="../sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
+									
 									<li><a href="../sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
 									<li><a href="../sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
                                     <li><a href="../sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
@@ -163,46 +162,25 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li class="current-menu-item"><a href="../alumnos.php">Licenciatura<span class="subheader">Nanotecnología</span></a>
+							<li><a href="../carrera.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
-				                  
-                                          <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
-                                       <li><a href="../Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="../Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del Arte</span></a></li>
+									
+									<li><a href="Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
+									 <li><a href="Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
+                                    <li><a href="Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
 									
 								</ul>
 							</li>
-							
-							
-	 <!-- Grado y grupo --> 
-
-<li><a href="alumnos.php">Grado y Grupo<span class="subheader">Nanotecnología</span></a>
-								<ul>
-									
-									<li><a href="porvotar.php"><span>1ero A</span></a></li>
-									<li><a href="votaron.php"><span>1ero B</span></a></li>
-                                    <li><a href="votaron.php"><span>2do A</span></a></li>
-                                    <li><a href="votaron.php"><span>2do B</span></a></li>
-                                     <li><a href="votaron.php"><span>3ero A</span></a></li>
-                                      <li><a href="votaron.php"><span>3ero B</span></a></li>
-                                       <li><a href="votaron.php"><span>4to A</span></a></li>
-                                        <li><a href="votaron.php"><span>4to B</span></a></li>
-									
-								</ul>
-							</li>
-                            
-                            
-                           <li><a href="alumnos.php">Turno<span class="subheader">Matutino y Vespertino</span></a>
-								<ul>
-									
-									<li><a href="porvotar.php"><span>Matutino</span></a></li>
-									<li><a href="votaron.php"><span>Vespertino</span></a></li>
-									
-								</ul>
-							</li> 
-                            
+                    
 						</ul>
 
 							<div id="bottom">
@@ -243,7 +221,7 @@ if(!isset($_SESSION['usuario'])){
 						
 					<!-- title -->
 					<div id="page-title">
-						<span class="title">Ing. Nanotecnolog&iacute;a</span>
+						<span class="title">Lic. Gerontolog&iacute; Alumnos votaron</span>
 					</div>
 					<!-- ENDS title -->
 
@@ -252,24 +230,26 @@ if(!isset($_SESSION['usuario'])){
 											
 						<!-- Aqui va el titulo y parrafo del contenido -->
 						<div class="one-half">
-              <table><tr>
-<th align="center"><font face="verdana"><b>CODIGO</b></font></th>
-<th align="center"><font face="verdana"><b>NOMBRE</b></font></th>
+              <table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt"><tr>
+<th><font face="verdana"><b>CODIGO</b></font></th>
+<th><font face="verdana"><b>NOMBRE</b></font></th>
 <th><font face="verdana"><b>APELLIDOP</b></font></th>
 <th><font face="verdana"><b>APELLIDOM</b></font></th>
 <th><font face="verdana"><b>VOTO</b></font></th>
+<th><font face="verdana"><b>MESA</b></font></th>
 </tr>
                 <?php  
 		include ("../conexion.php");
-  $link = @mysql_connect("localhost", "root","Joel10")
+  $link = @mysql_connect("localhost", "root","")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
-mysql_query("SET NAMES 'UTF8'");
-  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno, Urnas.voto FROM Estudiante,Licenciatura,Urnas 
-  WHERE Licenciatura.id=id_Licenciatura AND Licenciatura.id=3 AND Urnas.id_Estudiante=Estudiante.id";
+
+  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno,Urnas.voto FROM Estudiante,Licenciatura,Urnas WHERE Licenciatura.id=id_Licenciatura AND
+  Licenciatura.id=7 AND Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=1";
 	 
   $result1 = mysql_query($query) or die (mysql_error());
+  
   
 	  
   $numero = 0;
@@ -282,25 +262,17 @@ mysql_query("SET NAMES 'UTF8'");
 	    $row["Nombre"] . "</font></td>";
 	echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["Ap_Paterno"] . "</font></td>";
     echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["Ap_Materno"] . "</font></td>";
+    echo "<td width=\"25%\"><font face=\"verdana\">" .        $row["voto"] . "</font></td>";
        if($row["voto"]==1){
-                        echo '<td align="center"><input type="radio" value="VOTO" checked></td>';
-                    
-               
-                    
 	   $voto++;
   }else{
-  	         echo '<td align="center"><input type="radio" value="VOTO"></td>';
   $Novoto++;
   }
     $numero++;
   }
-
-	  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
+  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
       "</b></font></td></tr>";
-	  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Alumnos que votaron: " . $voto . 
-      "</b></font></td></tr>";
-	   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Alumnos sin votar: " . $Novoto . 
-      "</b></font></td></tr>";
+	  
 	  
 	 
   

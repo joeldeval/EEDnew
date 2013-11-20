@@ -1,14 +1,15 @@
 <?php
 session_start();
 if(!isset($_SESSION['usuario'])){
-	header("Location: principal.php");
+	header("Location: ../principal.php");
 }
 ?>
 <!DOCTYPE  html>
 <html>
 	<head>
+	<link rel="shortcut icon" href="../favicon.png" />
 		<meta charset="utf-8">
-		<title>EED | Votaron sede Santa Paula</title>
+		<title>EED | votaron Santa Paula</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
@@ -100,12 +101,12 @@ if(!isset($_SESSION['usuario'])){
 					<br/>
 		
 					<?php
-  echo "<form id='head' method='post' action='cerrarsesion.php'>
+  echo "<form id='head' method='post' action='../cerrarsesion.php'>
      <label id='lblusu'> Bienvenido ".$_SESSION['usuario']."</label><br/>
      <input type='submit' id='cerrarsesion' name='cerrarsesion' value='CERRAR SESI&Oacute;N' size='50'>
      </form>";
      ?><div class="top-search">
-						<form  method="get" id="searchform" action="../Buscador.php">
+						<form  method="get" id="searchform" action="#">
 							<div>
 								<input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
 								<input type="submit" id="searchsubmit" value=" " />
@@ -137,10 +138,10 @@ if(!isset($_SESSION['usuario'])){
 							
 								</li>
 							</li>
-							<li><a href="../alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li class="current-menu-item"><a href="votaronSantaPaula.php">Alumnos<span class="subheader">Votaron(Santa Paula)</span></a>
 								<ul>
 									
-									<li><a href="porvotarCasaCulturaI.php"><span>Por Votar(Santa Paula)</span></a></li>
+									<li><a href="porvotarSantaPaula.php"><span>Por Votar(Santa Paula)</span></a></li>
 									
 								</ul>
 							</li>
@@ -148,13 +149,13 @@ if(!isset($_SESSION['usuario'])){
                             
                             
                             	<!-- sedes -->
-                            <li  class="current-menu-item"><a href="../alumnos.php">Sede<span class="subheader">Alterna</span></a>
+                          <li><a href="../sede.php">Sede<span class="subheader">Santa Paula</span></a>
 								<ul>
 									
-									<li><a href="Casa_cultura_I.php"><span>Casa Cultura I</span></a></li>
-									<li><a href="../sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="../sede_sillitas/sillitas.php"><span>Sillitas</span></a></li>
-                                    <li><a href="../sede_santa_paula/santa_paula.php"><span>Santa Paula</span></a></li>
+									<li><a href="../sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
+                                    <li><a href="../sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
+                                    <li><a href="../sede_sillitas/Sillitas.php"><span>Sillitas</span></a></li>
+                                     <li><a href="Santa_Paula.php"><span>Santa Paula</span></a></li>
 									
 								</ul>
 							</li>
@@ -162,25 +163,11 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
-								<ul>
-									
-									<li><a href="../Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="../medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
-									 <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
-                                    <li><a href="../Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="../Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="../Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="../Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="../Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="../Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
-									
-								</ul>
-							</li>
-                    
+			
+
+
+                            
+                            
 						</ul>
 
 							<div id="bottom">
@@ -221,7 +208,7 @@ if(!isset($_SESSION['usuario'])){
 						
 					<!-- title -->
 					<div id="page-title">
-						<span class="title">Santa Paula Alumnos votaron</span>
+						<span class="title">Alumnos Que votaron(Santa Paula)</span>
 					</div>
 					<!-- ENDS title -->
 
@@ -231,12 +218,11 @@ if(!isset($_SESSION['usuario'])){
 						<!-- Aqui va el titulo y parrafo del contenido -->
 						<div class="one-half">
               <table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt"><tr>
-<td><font face="verdana"><b>CODIGO</b></font></td>
-<td><font face="verdana"><b>NOMBRE</b></font></td>
-<td><font face="verdana"><b>APELLIDOP</b></font></td>
-<td><font face="verdana"><b>APELLIDOM</b></font></td>
-<td><font face="verdana"><b>VOTO</b></font></td>
-<td><font face="verdana"><b>MESA</b></font></td>
+<th align="center"><font face="verdana"><b>CODIGO</b></font></th>
+<th align="center"><font face="verdana"><b>NOMBRE</b></font></th>
+<th><font face="verdana"><b>APELLIDO PATERNO</b></font></th>
+<th><font face="verdana"><b>APELLIDO MATERNO</b></font></th>
+<th><font face="verdana"><b>VOTO</b></font></th>
 </tr>
                 <?php  
 		include ("../conexion.php");
@@ -249,7 +235,17 @@ if(!isset($_SESSION['usuario'])){
 	 
   $result1 = mysql_query($query) or die (mysql_error());
   
-  
+  //consulta alumnos que NO votaron 
+  $result2 = mysql_query("SELECT count(voto) from Urnas where voto=0") or die (mysql_error()); 
+  $sinvotar = mysql_fetch_row($result2);
+   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Nu TOTAL Alumnos sin votar: " . $sinvotar[0] . 
+      "</b></font></td></tr>";
+	  
+	  //consulta alumnos que votaron 
+  $result3 = mysql_query("SELECT count(voto) from Urnas where voto=1") or die (mysql_error()); 
+  $votar = mysql_fetch_row($result3);
+   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Nu TOTAL Alumnos votaron: " . $votar[0] . 
+      "</b></font></td></tr>";
 	  
   $numero = 0;
   $voto=0;
@@ -271,11 +267,16 @@ if(!isset($_SESSION['usuario'])){
   }
   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Numero registros: " . $numero . 
       "</b></font></td></tr>";
-	  
+	  echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Alumnos que votaron: " . $voto . 
+      "</b></font></td></tr>";
+	   echo "<tr><td colspan=\"15\"><font face=\"verdana\"><b>Alumnos sin votar: " . $Novoto . 
+      "</b></font></td></tr>";
 	  
 	 
   
   mysql_free_result($result1);
+  mysql_free_result($result2);
+  mysql_free_result($result3);
   mysql_close($link);
 ?>
               </p>
@@ -296,11 +297,11 @@ if(!isset($_SESSION['usuario'])){
 			<!-- ENDS MAIN -->
 			
 			<!-- Twitter -->
-			<div id="twitter">
+		<div id="twitter">
 				<div class="wrapper">
 					<a href="#" id="prev-tweet"></a>
 					<a href="#" id="next-tweet"></a>
-					<img id="bird" src="../img/bird.png" alt="Tweets" />
+					<img id="bird" src="../img/logoudg.png" alt="Tweets" />
 					<div id="tweets">
 						<ul class="tweet_list"></ul>
 					</div>
@@ -309,14 +310,12 @@ if(!isset($_SESSION['usuario'])){
 			<!-- ENDS Twitter -->
 
 			
-			
-		
 		
 			<!-- Bottom -->
-				<div id="bottom">
+			<div id="bottom">
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
-					<div id="bottom-text">CUTonal&aacute; 2013 --- Todos los derechos reservados --- </div>
+					<div id="bottom-text">Universidad de Guadalajara Derechos reservados 1997-2012.</div>
 					<!-- Social -->
 					<ul class="social ">
 						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>

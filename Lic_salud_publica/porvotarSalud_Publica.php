@@ -137,7 +137,7 @@ if(!isset($_SESSION['usuario'])){
 							
 								</li>
 							</li>
-							<li><a href="../alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a href="salud_publica.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
 									
@@ -149,7 +149,7 @@ if(!isset($_SESSION['usuario'])){
                             
                             
                             	<!-- sedes -->
-                            <li class="current-menu-item"><a href="Casa_cultura_I.php">Sede<span class="subheader">Alterna</span></a>
+                            <li class="current-menu-item"><a href="sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
 									<li><a href="../sede_Casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
@@ -163,7 +163,7 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+							<li><a href="../carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
 									<li><a href="Salud_publica.php"><span>Lic. Salud Publica</span></a></li>

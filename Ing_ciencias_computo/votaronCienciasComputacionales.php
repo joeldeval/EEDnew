@@ -8,7 +8,7 @@ if(!isset($_SESSION['usuario'])){
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>EED | Votaron Ing. Nanotecnologia</title>
+		<title>EED | Votaron Ing. Ciencias Computacionales</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
@@ -137,10 +137,10 @@ if(!isset($_SESSION['usuario'])){
 							
 								</li>
 							</li>
-							<li><a href="../alumnos.php">Alumnos<span class="subheader">votantes</span></a>
+							<li><a href="ciencias_computo.php">Alumnos<span class="subheader">votantes</span></a>
 								<ul>
 									
-									<li><a href="porvotarNanotecnologia.php"><span>Por Votar(Nanotecnologia)</span></a></li>
+									<li><a href="porvotarCienciasComputacionales.php"><span>Por Votar(Ciencias Computacionales)</span></a></li>
 									
 								</ul>
 							</li>
@@ -148,7 +148,7 @@ if(!isset($_SESSION['usuario'])){
                             
                             
                             	<!-- sedes -->
-                            <li  class="current-menu-item"><a href="../alumnos.php">Sede<span class="subheader">Alterna</span></a>
+                            <li  class="current-menu-item"><a href="../sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
 									<li><a href="../sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
@@ -162,12 +162,12 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="../alumnos.php">Carrera<span class="subheader">Licenciatura</span></a>
+							<li><a href="../carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
-									<li><a href="><span>Lic. Salud Publica</span></a></li>
+									<li><a href="../Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
 									<li><a href="../Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                    <li><a href="../Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
                                      <li><a href="../Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
                                      <li><a href="../Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
 									 <li><a href="../Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
@@ -221,7 +221,7 @@ if(!isset($_SESSION['usuario'])){
 						
 					<!-- title -->
 					<div id="page-title">
-						<span class="title">Ing. Nanotecnolog&iacute;a Alumnos votaron</span>
+						<span class="title">Ing. Ciencias Computacionales Alumnos votaron</span>
 					</div>
 					<!-- ENDS title -->
 
@@ -245,7 +245,8 @@ if(!isset($_SESSION['usuario'])){
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
 
-  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno,Urnas.voto FROM Estudiante,Licenciatura,Urnas WHERE Licenciatura.id=id_Licenciatura AND Licenciatura.id=3 AND Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=1";
+  $query ="SELECT Nombre,Codigo,Ap_Paterno,Ap_Materno,Urnas.voto FROM Estudiante,Licenciatura,Urnas WHERE Licenciatura.id=id_Licenciatura AND
+  Licenciatura.id=5 AND Urnas.id_Estudiante=Estudiante.id AND Urnas.voto=1";
 	 
   $result1 = mysql_query($query) or die (mysql_error());
   
