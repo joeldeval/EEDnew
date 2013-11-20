@@ -16,7 +16,7 @@ require_once('listarContactos.php');
 	<link rel="shortcut icon" href="favicon.png" />
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/> 
 				<meta charset="utf-8">
-		<title>EED | Alumnos Por Votar</title>
+		<title>EED | Alumnos </title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />

@@ -168,18 +168,19 @@ if(!isset($_SESSION['usuario'])){
 							<li><a href="carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
 								<ul>
 									
-									<li><a href="porvotar.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="votaron.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="votaron.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="votaron.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="votaron.php"><span>Ing. Ciencias Computacionales</span></a></li>
-                                    <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="votaron.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="votaron.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="votaron.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="votaron.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="votaron.php"><span>Lic. Abogado</span></a></li>
-                                          <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+									<li><a href="Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
+									 <li><a href="Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
+                                    <li><a href="Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
+									
 									
 								</ul>
 							</li>
@@ -238,18 +239,18 @@ if(!isset($_SESSION['usuario'])){
 							<h6 class="line-divider">Carreras </h6>
 							<p>   
 							
-								<li><a href="porvotar.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="votaron.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="votaron.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="votaron.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="votaron.php"><span>Ing. Ciencias Computacionales</span></a></li>
-                                    <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="votaron.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="votaron.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="votaron.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="votaron.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="votaron.php"><span>Lic. Abogado</span></a></li>
-                                          <li><a href="votaron.php"><span>Lic. Gerontologia</span></a></li>
+								<li><a href="Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
+									<li><a href="Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
+                                    <li><a href="Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
+                                     <li><a href="Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
+                                     <li><a href="Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
+									 <li><a href="Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
+                                    <li><a href="Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
+                                     <li><a href="Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
+                                      <li><a href="Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
+                                       <li><a href="Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
+                                        <li><a href="Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
+                                         <li><a href="Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
 								
                             
 							</p>

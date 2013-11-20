@@ -8,7 +8,7 @@ class Conexion
     {
         try
         {
-            $this->mysqli = new mysqli("localhost", "root", "Joel10", "cutonala");
+            $this->mysqli = new mysqli("localhost", "root", "", "cutonala");
             if ($this->mysqli->connect_errno) {
                 throw new Exception("Fallo al conectar a MySQL: (" . $this->mysqli->connect_errno . ") " . $this->mysqli->connect_error);
             }
