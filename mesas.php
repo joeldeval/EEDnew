@@ -9,7 +9,7 @@ if(!isset($_SESSION['usuario'])){
 	<head>
 	<link rel="shortcut icon" href="favicon.png" />
 		<meta charset="utf-8">
-		<title>EED | Inicio</title>
+		<title>EED | Mesas</title>
  <script src="jquery-ui/js/jquery-1.9.1.js"></script>
     <script src="jquery-ui/js/jquery-ui.js"></script>
     <script src="ajax-jquery.js"></script>
@@ -139,56 +139,9 @@ if(!isset($_SESSION['usuario'])){
 							<li class="current-menu-item"><a href="index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
-							<li><a id="Alumnos" href="alumnos.php">Alumnos<span class="subheader">Todas las Sedes</span></a>
-								<ul>
-									
-									<li><a href="porvotar.php"><span>Aún no han Votado</span></a></li>
-									<li><a href="votaron.php"><span>Ya Votaron</span></a></li>
-									
-								</ul>
-							</li>
-						
-                            
-                            
-                            	<!-- sedes -->
-                            <li><a href="sede.php">Sedes<span class="subheader">Alternas</span></a>
-								<ul>
-									
-									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
-									<li><a href="sede_casa_culturaII/Casa_CulturaII.php"><span>Casa Cultura II</span></a></li>
-                                    <li><a href="sede_sillitas/Sillitas.php"><span>Sillitas</span></a></li>
-                                    <li><a href="sede_santa_paula/Santa_Paula.php"><span>Santa Paula</span></a></li>
-									
-								</ul>
-							</li>
-                            
-                            
-                           	<!-- carreras --> 
-                            
-							<li><a href="carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
-								<ul>
-									
-									<li><a href="Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
-									 <li><a href="Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
-                                    <li><a href="Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
-									
-								</ul>
-							</li>
-
- 	<!-- Grado y grupo --> 
-<li><a id="Alumnos" href="index_mesas.php">Mesas<span class="subheader">Organizar mesas</span></a>
+								<li><a id="Alumnos" href="index_mesas.php">Mesas<span class="subheader">Organizar mesas</span></a>
 							<ul>
-									
-									<li><a href="mesas.php"><span>Dividir las mesas</span></a></li>
+					
 									
 									
 								</ul>
@@ -224,19 +177,84 @@ if(!isset($_SESSION['usuario'])){
 			
 
 			<!-- Slider -->
+			
 			<div id="slider-block">
 				<div id="slider-holder">
-					<div id="slider">
-						<a href="http://www.cutonala.udg.mx"><img src="images/cutonala1.png" title="¡Visita la página del Centro Universitario de Tonalá!" alt="" /></a>
-						
-						<a href="index.php"><img id="eedinicio" src="images/EEDlogo1.jpg" title="Elección Electoral Democrática" alt="" /></a>
-						
-					</div>
+					<h2>Elegir Número de mesas:</h2></br>
+					 <form method="post" action="mesas.php">  
+					<input type="text" name="num" id="n1" size="20" maxlength="20" onkeypress= required><br/>
+					<font color="red"></font> <pre><select name="mesa" id="new"> 
+<option selected="selected">
+<font color="red">1</font></option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>6</option>
+<option>12</option>
+</select>
+<input type="submit">  
+</form>
+
 				</div>
 			</div>
 			<!-- ENDS Slider -->
 			
 			<!-- MAIN -->
+			<?php  
+			
+			include ("conexion.php");
+  $link = @mysql_connect("localhost", "root","")
+      or die ("Error al conectar a la base de datos.");
+  @mysql_select_db("cutonala", $link)
+      or die ("Error al conectar a la base de datos.");
+	  mysql_query("SET NAMES 'UTF8'");
+if($_POST['mesa']=='1')  
+{  
+        
+        $query ="INSERT INTO mesas (id_Licenciatura, Num_mesa) VALUES (1,1),(2,1),(3,1),(4,1),(5,1),(6,1),(7,1)
+		,(8,1),(9,1),(10,1),(11,1),(12,1)";  
+		 $result1 = mysql_query($query) or die (mysql_error());
+		 header("Location: mesa1.php");
+}  
+else if($_POST['mesa']=='2')  
+{  
+      $query ="INSERT INTO mesas (id_Licenciatura, Num_mesa) VALUES (1,1),(2,1),(3,1),(4,1),(5,1),(6,1),(7,2)
+		,(8,2),(9,2),(10,2),(11,2),(12,2)";  
+		 $result1 = mysql_query($query) or die (mysql_error()); 
+     header("Location: mesa2.php");
+}  
+else if($_POST['mesa']=='3')  
+{  
+   $query ="INSERT INTO mesas (id_Licenciatura, Num_mesa) VALUES (1,1),(2,1),(3,1),(4,1),(5,2),(6,2),(7,2)
+		,(8,2),(9,3),(10,3),(11,3),(12,3)";  
+		 $result1 = mysql_query($query) or die (mysql_error()); 
+header("Location: mesa3.php");		 
+}  
+else if($_POST['mesa']=='4')  
+{  
+     $query ="INSERT INTO mesas (id_Licenciatura, Num_mesa) VALUES (1,1),(2,1),(3,1),(4,2),(5,2),(6,2),(7,3)
+		,(8,3),(9,3),(10,4),(11,4),(12,4)"; 
+		$result1 = mysql_query($query) or die (mysql_error());  
+		header("Location: mesa4.php");
+}  
+else if($_POST['mesa']=='6')  
+{  
+     $query ="INSERT INTO mesas (id_Licenciatura, Num_mesa) VALUES (1,1),(2,1),(3,2),(4,2),(5,3),(6,3),(7,4)
+		,(8,4),(9,5),(10,5),(11,6),(12,6)"; 
+		$result1 = mysql_query($query) or die (mysql_error());  
+		header("Location: mesa6.php");
+}  
+else if($_POST['mesa']=='12')  
+{  
+     $query ="INSERT INTO mesas (id_Licenciatura, Num_mesa) VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7)
+		,(8,8),(9,9),(10,10),(11,11),(12,12)";  
+		 $result1 = mysql_query($query) or die (mysql_error()); 
+header("Location: mesa12.php");		 
+}  
+
+mysql_free_result($result1);
+  mysql_close($link);
+?>  
 			
 			<!-- ENDS MAIN -->
 			
@@ -274,4 +292,3 @@ if(!isset($_SESSION['usuario'])){
 	
 	</body>
 </html>
-

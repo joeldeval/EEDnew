@@ -9,7 +9,7 @@ if(!isset($_SESSION['usuario'])){
 	<head>
 	<link rel="shortcut icon" href="favicon.png" />
 		<meta charset="utf-8">
-		<title>EED | Inicio</title>
+		<title>EED | Sedes</title>
  <script src="jquery-ui/js/jquery-1.9.1.js"></script>
     <script src="jquery-ui/js/jquery-ui.js"></script>
     <script src="ajax-jquery.js"></script>
@@ -136,7 +136,7 @@ if(!isset($_SESSION['usuario'])){
 					<div class="wrapper">
 						<!-- Navigation -->
 						<ul id="nav" class="sf-menu">
-							<li class="current-menu-item"><a href="index.php">Inicio<span class="subheader">Bienvenido</span></a>
+							<li><a href="index.php">Inicio<span class="subheader">Bienvenido</span></a>
 							
 								</li>
 							<li><a id="Alumnos" href="alumnos.php">Alumnos<span class="subheader">Todas las Sedes</span></a>
@@ -151,7 +151,7 @@ if(!isset($_SESSION['usuario'])){
                             
                             
                             	<!-- sedes -->
-                            <li><a href="sede.php">Sedes<span class="subheader">Alternas</span></a>
+                            <li class="current-menu-item"><a href="sede.php">Sede<span class="subheader">Alterna</span></a>
 								<ul>
 									
 									<li><a href="sede_casa_culturaI/Casa_CulturaI.php"><span>Casa Cultura I</span></a></li>
@@ -165,36 +165,7 @@ if(!isset($_SESSION['usuario'])){
                             
                            	<!-- carreras --> 
                             
-							<li><a href="carreras.php">Carrera<span class="subheader">Licenciatura</span></a>
-								<ul>
-									
-									<li><a href="Lic_salud_publica/Salud_publica.php"><span>Lic. Salud Publica</span></a></li>
-									<li><a href="Lic_medico_cirujano/medico_cirujano.php"><span>Lic. Medico cirujano y partero</span></a></li>
-                                    <li><a href="Ing_nanotecnologia/nanotecnologia.php"><span>Ing. Nanotecnologia</span></a></li>
-                                     <li><a href="Ing_energia/energia.php"><span>Ing. Energia</span></a></li>
-                                     <li><a href="Ing_ciencias_computo/ciencias_computo.php"><span>Ing. Ciencias Computacionales</span></a></li>
-									 <li><a href="Lic_historia_arte/historia_arte.php"><span>Lic. Historia del arte</span></a></li>
-                                    <li><a href="Lic_gerontologia/gerontologia.php"><span>Lic. Gerontologia</span></a></li>
-                                     <li><a href="Lic_estudios_libe/estudios_libe.php"><span>Lic. Estudios Liberales</span></a></li>
-                                      <li><a href="Lic_diseño_artesania/diseño_artesania.php"><span>Lic. Diseño de Artesanias</span></a></li>
-                                       <li><a href="Lic_contaduria/contaduria.php"><span>Lic. Contaduria Publica</span></a></li>
-                                        <li><a href="Lic_admin_negocios/admin_negocios.php"><span>Lic. Administracion de Negocios</span></a></li>
-                                         <li><a href="Lic_abogado/abogado.php"><span>Lic. Abogado</span></a></li>
-									
-								</ul>
-							</li>
-
- 	<!-- Grado y grupo --> 
-<li><a id="Alumnos" href="index_mesas.php">Mesas<span class="subheader">Organizar mesas</span></a>
-							<ul>
-									
-									<li><a href="mesas.php"><span>Dividir las mesas</span></a></li>
-									
-									
-								</ul>
-							</li>
 							
-
 						</ul>
 
 							<div id="bottom">
@@ -223,17 +194,56 @@ if(!isset($_SESSION['usuario'])){
 			
 			
 
-			<!-- Slider -->
-			<div id="slider-block">
-				<div id="slider-holder">
-					<div id="slider">
-						<a href="http://www.cutonala.udg.mx"><img src="images/cutonala1.png" title="¡Visita la página del Centro Universitario de Tonalá!" alt="" /></a>
+			<div id="main">
+				<!-- wrapper-main -->
+				<div class="wrapper">
+					
+					
+					<!-- content -->
+					<div id="content">
 						
-						<a href="index.php"><img id="eedinicio" src="images/EEDlogo1.jpg" title="Elección Electoral Democrática" alt="" /></a>
-						
+					<!-- title -->
+					<div id="page-title">
+						<span class="title">MESAS</span>
 					</div>
+					<!-- ENDS title -->
+
+					<!-- page-content -->
+					<div id="page-content">
+											
+						<!-- 2 cols -->
+						<div class="one-column">
+							<h6 class="line-divider">Alternas </h6>
+							<p>  
+                            <h1>Mesa 1</h1>							
+							Lic. salud publica.
+							Lic. M&eacute;dico cirujano partero
+							Ing. Nanotecnolog&iacute;a
+							Ing. Energ&iacute;a
+							Ing. Ciencias computacionales
+                            Lic. Historia del arte 							
+                            Lic. Gerontolog&iacute;a
+							Lic. Estudios Liberales
+							Lic. Diseño de artesanias
+							Lic. Contadur&iacute;a publica
+							Lic. Administraci&oacute;n de negocios
+							Lic. Abogado
+							</p>
+						</div>
+						
+						</div>
+						<div class="clear "></div>
+						<!-- ENDS 1/4 cols -->
+	
+					</div>
+					<!-- ENDS page-content -->
+		
+					</div>
+					<!-- ENDS content -->
 				</div>
+				<!-- ENDS wrapper-main -->
 			</div>
+			<!-- ENDS MAIN -->
 			<!-- ENDS Slider -->
 			
 			<!-- MAIN -->
@@ -241,7 +251,7 @@ if(!isset($_SESSION['usuario'])){
 			<!-- ENDS MAIN -->
 			
 			<!-- Twitter -->
-			<div id="twitter">
+		<div id="twitter">
 				<div class="wrapper">
 					<a href="#" id="prev-tweet"></a>
 					<a href="#" id="next-tweet"></a>
@@ -259,7 +269,7 @@ if(!isset($_SESSION['usuario'])){
 			<div id="bottom">
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
-					<div id="bottom-text">Universidad de Guadalajara © Derechos reservados ©1997-2012.</div>
+					<div id="bottom-text">Universidad de Guadalajara Derechos reservados 1997-2012.</div>
 					<!-- Social -->
 					<ul class="social ">
 						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>
@@ -274,4 +284,3 @@ if(!isset($_SESSION['usuario'])){
 	
 	</body>
 </html>
-
