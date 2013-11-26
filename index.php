@@ -185,7 +185,15 @@ if(!isset($_SESSION['usuario'])){
 							</li>
 
  	<!-- Grado y grupo --> 
-
+<li><a id="Alumnos" href="index_mesas.php">Mesas<span class="subheader">Organizar mesas</span></a>
+							<ul>
+									
+									<li><a href="mesas.php"><span>Dividir las mesas</span></a></li>
+									
+									
+								</ul>
+							</li>
+							
 
 						</ul>
 
