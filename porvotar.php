@@ -85,7 +85,9 @@ if(!isset($_SESSION['usuario'])){
 		<link rel="stylesheet" href="js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 		<script type="text/javascript" src="js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 		<!-- ENDS Fancybox -->
-		
+			 <script src="jquery-ui/js/jquery-1.9.1.js"></script>
+  <script src="jquery-ui/js/jquery-ui.js"></script>
+  <script src="ajax.js"></script>
 		
 
 	</head>
@@ -211,8 +213,8 @@ if(!isset($_SESSION['usuario'])){
 
                 <?php  
 
-		include ("../conexion.php");
-  $link = @mysql_connect("localhost", "root","Joel10")
+	
+  $link = @mysql_connect("localhost", "root","")
       or die ("Error al conectar a la base de datos.");
   @mysql_select_db("cutonala", $link)
       or die ("Error al conectar a la base de datos.");
@@ -244,14 +246,13 @@ if(!isset($_SESSION['usuario'])){
     echo "      <td>" .$row["Nombre"] . "</td>";
 	echo "      <td>" .$row["Ap_Paterno"] . "</td>";
     echo "      <td>" .$row["Ap_Materno"] . "</td>";
-    echo "      <td align='center'><input type='radio' value='VOTO'></td>
+    echo "      <td id='faltavotar' align='center'><input type='radio' value='VOTO'></td>
              </tr>";
 
   }
 
   echo "</table>";
   mysql_free_result($result1);
-  mysql_free_result($result3);
   mysql_close($link);
 ?>
              

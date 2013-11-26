@@ -1,7 +1,7 @@
 
 <?
 /* A continuación, realizamos la conexión con nuestra base de datos en MySQL */
-$link = mysql_connect("localhost","root","Joel10");
+$link = mysql_connect("localhost","root","");
 mysql_select_db("cutonala", $link);
 
 $usu=$_POST['txtusuario'];

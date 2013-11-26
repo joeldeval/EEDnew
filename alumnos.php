@@ -92,6 +92,9 @@ require_once('listarContactos.php');
 		<link rel="stylesheet" href="js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 		<script type="text/javascript" src="js/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 		<!-- ENDS Fancybox -->
+		 <script src="jquery-ui/js/jquery-1.9.1.js"></script>
+  <script src="jquery-ui/js/jquery-ui.js"></script>
+  <script src="ajax.js"></script>
 		
 		
 

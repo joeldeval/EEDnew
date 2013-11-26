@@ -51,9 +51,11 @@ class ListarContactos
                     $numero++;
                     if ($contacto['voto']==1) {
 
-                        echo '<td align="center"><input type="radio" value="VOTO" checked></td>';
+                        echo '<td id"voto" align="center"><input type="radio" value="VOTO" checked></td>';
                     }else{
-                        echo '<td align="center"><input type="radio" value="VOTO"></td>';
+                        echo '<td id="faltavotar" align="center"><input type="radio" value="VOTO"></td>';
+                       
+                        
                     }
                  
                    

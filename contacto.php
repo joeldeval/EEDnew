@@ -14,10 +14,9 @@ class Contacto
     {
         try
         {
-
+$numero=0;
             $resultado = array();
             $conexion = new Conexion();
-            mysql_query("SET NAMES 'UTF8'");
             if(!$conexion->conectar())
             {
                 throw new Exception($conexion->getError());
@@ -31,6 +30,7 @@ class Contacto
                      {
                         
                          $resultado[] = $row;
+
                          $numero++;
                      }
                 }
