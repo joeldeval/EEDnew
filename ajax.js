@@ -1,7 +1,7 @@
 
 function validarCampos()
 {
-        alert("Forma enviada.");
+        alert("Seguro que el Alumno quiere votar?.");
     
 }
 
@@ -10,7 +10,7 @@ function accionBoton()
     $('#faltavotar').click(function(){
         validarCampos();
     });
-    
+
 }
 
 $(document).ready(function() {
